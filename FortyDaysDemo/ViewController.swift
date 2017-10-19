@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    lazy var listArry:[(name:String,control:String)] = {
-        return [("计时器","TestViewController")]
-    }()
+    lazy var listArray:[(name:String,control:String)] = {
+        return [("计时器","TimerViewController")]
+    }() 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +26,12 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     // MARK: UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listArry.count;
+        return listArray.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "HomeListCell")
-        let title  = String(indexPath.row + 1) + "." + listArry[indexPath.row].name
+        let title  = String(indexPath.row + 1) + "." + listArray[indexPath.row].name
         cell.textLabel?.text = title
         return cell
     }
@@ -43,7 +43,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     // MARK: UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 获取类名，push
-        let date = listArry[indexPath.row]
+        let date = listArray[indexPath.row]
         let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
         let classType = NSClassFromString(namespace + "." + date.control) as? UIViewController.Type
         if let type = classType {
