@@ -33,7 +33,9 @@ class TimerViewController: UIViewController,UITableViewDataSource {
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        timer.invalidate()
+        if (timer != nil) {
+         timer.invalidate()
+        }
     }
     
     // MARK: - 操作
