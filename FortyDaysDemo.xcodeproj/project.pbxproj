@@ -10,6 +10,8 @@
 		2014F95D1F9CC174005FB975 /* 测试视频.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2014F95C1F9CC174005FB975 /* 测试视频.mov */; };
 		2014F9661F9CC895005FB975 /* LocalVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2014F9641F9CC895005FB975 /* LocalVideoCell.swift */; };
 		2014F9671F9CC895005FB975 /* LocalVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2014F9651F9CC895005FB975 /* LocalVideoCell.xib */; };
+		2014F96D1FA0E03A005FB975 /* DateSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2014F96B1FA0E03A005FB975 /* DateSelectionViewController.swift */; };
+		2014F96E1FA0E03A005FB975 /* DateSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2014F96C1FA0E03A005FB975 /* DateSelectionViewController.xib */; };
 		20BCAC7E1F9CB94E0053DC55 /* LocalVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BCAC7D1F9CB94E0053DC55 /* LocalVideoViewController.swift */; };
 		6E8C08121F9DC98000970068 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C08101F9DC98000970068 /* LocationViewController.swift */; };
 		6E8C08131F9DC98000970068 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8C08111F9DC98000970068 /* LocationViewController.xib */; };
@@ -49,6 +51,8 @@
 		2014F95C1F9CC174005FB975 /* 测试视频.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "测试视频.mov"; sourceTree = "<group>"; };
 		2014F9641F9CC895005FB975 /* LocalVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVideoCell.swift; sourceTree = "<group>"; };
 		2014F9651F9CC895005FB975 /* LocalVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocalVideoCell.xib; sourceTree = "<group>"; };
+		2014F96B1FA0E03A005FB975 /* DateSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionViewController.swift; sourceTree = "<group>"; };
+		2014F96C1FA0E03A005FB975 /* DateSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSelectionViewController.xib; sourceTree = "<group>"; };
 		20BCAC7D1F9CB94E0053DC55 /* LocalVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVideoViewController.swift; sourceTree = "<group>"; };
 		6E8C08101F9DC98000970068 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		6E8C08111F9DC98000970068 /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 				2014F95C1F9CC174005FB975 /* 测试视频.mov */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		2014F9681FA0DF3F005FB975 /* 6.日期选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				2014F96B1FA0E03A005FB975 /* DateSelectionViewController.swift */,
+				2014F96C1FA0E03A005FB975 /* DateSelectionViewController.xib */,
+			);
+			path = "6.日期选择器";
 			sourceTree = "<group>";
 		};
 		20DBEDB71F9CA33F00C8580E /* 2.本地视频播放 */ = {
@@ -174,6 +187,7 @@
 				6E8C080F1F9DC8AD00970068 /* 3.定位 */,
 				6E8C081A1F9F0E2000970068 /* 4.颜色渐变 */,
 				6E8C082F1FA02E7500970068 /* 5.3D Touch */,
+				2014F9681FA0DF3F005FB975 /* 6.日期选择器 */,
 				2014F95B1F9CC15A005FB975 /* resources */,
 				6ED65A2D1F97422F001BB3FA /* Assets.xcassets */,
 				6ED65A2F1F97422F001BB3FA /* LaunchScreen.storyboard */,
@@ -319,6 +333,7 @@
 				6ED65A5C1F98814E001BB3FA /* TimerViewController.xib in Resources */,
 				6ED65A311F97422F001BB3FA /* LaunchScreen.storyboard in Resources */,
 				6ED65A2E1F97422F001BB3FA /* Assets.xcassets in Resources */,
+				2014F96E1FA0E03A005FB975 /* DateSelectionViewController.xib in Resources */,
 				2014F9671F9CC895005FB975 /* LocalVideoCell.xib in Resources */,
 				2014F95D1F9CC174005FB975 /* 测试视频.mov in Resources */,
 				6ED65A2C1F97422F001BB3FA /* Main.storyboard in Resources */,
@@ -351,6 +366,7 @@
 				6EFFA6801FA06ABA00B2FCE9 /* TouchShowViewController.swift in Sources */,
 				6ED65A291F97422F001BB3FA /* ViewController.swift in Sources */,
 				6ED65A5B1F98814E001BB3FA /* TimerViewController.swift in Sources */,
+				2014F96D1FA0E03A005FB975 /* DateSelectionViewController.swift in Sources */,
 				20BCAC7E1F9CB94E0053DC55 /* LocalVideoViewController.swift in Sources */,
 				6E8C08121F9DC98000970068 /* LocationViewController.swift in Sources */,
 				6E8C081C1F9F0ED900970068 /* ColorGradientViewController.swift in Sources */,
