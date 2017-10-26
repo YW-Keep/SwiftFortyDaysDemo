@@ -12,7 +12,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     @IBOutlet weak var tableView: UITableView!
     lazy var listArray:[(name:String,control:String)] = {
-        return [("计时器","TimerViewController"),("本地视频播放","LocalVideoViewController"),("定位","LocationViewController"),("颜色渐变","ColorGradientViewController"),("3D Touch","TouchViewController"),("日志选择器","DateSelectionViewController")]
+        return [("计时器","TimerViewController"),("本地视频播放","LocalVideoViewController"),("定位","LocationViewController"),("颜色渐变","ColorGradientViewController"),("3D Touch","TouchViewController"),("日志选择器（数字转轮）","DateSelectionViewController")]
     }() 
     
     override func viewDidLoad() {
