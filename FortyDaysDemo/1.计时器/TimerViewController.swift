@@ -12,7 +12,7 @@ class TimerViewController: UIViewController,UITableViewDataSource {
     @IBOutlet weak var showLabel: UILabel!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!    
     var timer : Timer!
     var ms: UInt8 = 0
     var sec: UInt8 = 0
@@ -48,7 +48,7 @@ class TimerViewController: UIViewController,UITableViewDataSource {
         } else {
             sender.setTitle("计次", for: UIControlState.normal)
             sender.backgroundColor = UIColor.darkGray
-            sender.endEditing(false)
+            sender.isEnabled = false
             self.reset()
         }
     }
@@ -62,7 +62,7 @@ class TimerViewController: UIViewController,UITableViewDataSource {
             sender.setTitle("停止", for: UIControlState.normal)
             leftButton.setTitle("计次", for: UIControlState.normal)
             leftButton.backgroundColor = UIColor.gray
-            leftButton.endEditing(true)
+            leftButton.isEnabled = true 
 
         } else {
             sender.backgroundColor = UIColor(red: 84/255.0, green: 184/255.0, blue: 100/255.0, alpha: 1)

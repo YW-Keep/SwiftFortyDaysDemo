@@ -21,7 +21,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate {
         super.viewDidLoad()
         locateManager.delegate = self
         // 获取定位权限
-        self.locateManager.requestWhenInUseAuthorization()
+        locateManager.requestWhenInUseAuthorization()
         // 判读是不是有定位权限
         if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.denied {
             self.showLabel.text = "请打开定位！！！"
@@ -39,12 +39,13 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate {
         
         if inputTextField.text != nil {
             CLGeocoder().geocodeAddressString(inputTextField.text!, completionHandler: { (pms, err) in
-                if pms != nil {
+                if pms != nil && pms!.count > 0 {
                     let placemark:CLPlacemark = (pms?.last)!
                     self.showTwoLabel.text = "latitude:" + String(describing: placemark.location!.coordinate.latitude) + "\n" + "longitude:" + String(describing: placemark.location!.coordinate.longitude) + "\n" +  placemark.name!
                 }
             })
         }
+      
     }
     
     // MARK: - CLLocationManagerDelegate
@@ -56,6 +57,7 @@ class LocationViewController: UIViewController,CLLocationManagerDelegate {
                 if pms != nil {
                     let placemark:CLPlacemark = (pms?.last)!
                     self.showLabel.text = placemark.country! + placemark.administrativeArea! + placemark.locality! + placemark.subLocality! + placemark.name!
+                    self.locateManager.stopUpdatingLocation()
                 }
             })
         }
