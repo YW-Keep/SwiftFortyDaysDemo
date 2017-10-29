@@ -13,6 +13,8 @@
 		2014F96D1FA0E03A005FB975 /* DateSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2014F96B1FA0E03A005FB975 /* DateSelectionViewController.swift */; };
 		2014F96E1FA0E03A005FB975 /* DateSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2014F96C1FA0E03A005FB975 /* DateSelectionViewController.xib */; };
 		20BCAC7E1F9CB94E0053DC55 /* LocalVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BCAC7D1F9CB94E0053DC55 /* LocalVideoViewController.swift */; };
+		20CBF31A1FA6099500DEE0CA /* CardScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBF3191FA6099500DEE0CA /* CardScrollViewController.swift */; };
+		20CBF31C1FA6189F00DEE0CA /* CardScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBF31B1FA6189F00DEE0CA /* CardScrollCell.swift */; };
 		6E8C08121F9DC98000970068 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C08101F9DC98000970068 /* LocationViewController.swift */; };
 		6E8C08131F9DC98000970068 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8C08111F9DC98000970068 /* LocationViewController.xib */; };
 		6E8C081C1F9F0ED900970068 /* ColorGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C081B1F9F0ED900970068 /* ColorGradientViewController.swift */; };
@@ -54,6 +56,8 @@
 		2014F96B1FA0E03A005FB975 /* DateSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionViewController.swift; sourceTree = "<group>"; };
 		2014F96C1FA0E03A005FB975 /* DateSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSelectionViewController.xib; sourceTree = "<group>"; };
 		20BCAC7D1F9CB94E0053DC55 /* LocalVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVideoViewController.swift; sourceTree = "<group>"; };
+		20CBF3191FA6099500DEE0CA /* CardScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScrollViewController.swift; sourceTree = "<group>"; };
+		20CBF31B1FA6189F00DEE0CA /* CardScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScrollCell.swift; sourceTree = "<group>"; };
 		6E8C08101F9DC98000970068 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		6E8C08111F9DC98000970068 /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		6E8C081B1F9F0ED900970068 /* ColorGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGradientViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,15 @@
 				2014F96C1FA0E03A005FB975 /* DateSelectionViewController.xib */,
 			);
 			path = "6.日期选择器";
+			sourceTree = "<group>";
+		};
+		20CBF3181FA6095A00DEE0CA /* 7.卡片式滑动 */ = {
+			isa = PBXGroup;
+			children = (
+				20CBF3191FA6099500DEE0CA /* CardScrollViewController.swift */,
+				20CBF31B1FA6189F00DEE0CA /* CardScrollCell.swift */,
+			);
+			path = "7.卡片式滑动";
 			sourceTree = "<group>";
 		};
 		20DBEDB71F9CA33F00C8580E /* 2.本地视频播放 */ = {
@@ -188,6 +201,7 @@
 				6E8C081A1F9F0E2000970068 /* 4.颜色渐变 */,
 				6E8C082F1FA02E7500970068 /* 5.3D Touch */,
 				2014F9681FA0DF3F005FB975 /* 6.日期选择器 */,
+				20CBF3181FA6095A00DEE0CA /* 7.卡片式滑动 */,
 				2014F95B1F9CC15A005FB975 /* resources */,
 				6ED65A2D1F97422F001BB3FA /* Assets.xcassets */,
 				6ED65A2F1F97422F001BB3FA /* LaunchScreen.storyboard */,
@@ -371,8 +385,10 @@
 				6E8C08121F9DC98000970068 /* LocationViewController.swift in Sources */,
 				6E8C081C1F9F0ED900970068 /* ColorGradientViewController.swift in Sources */,
 				6ED65A271F97422F001BB3FA /* AppDelegate.swift in Sources */,
+				20CBF31C1FA6189F00DEE0CA /* CardScrollCell.swift in Sources */,
 				2014F9661F9CC895005FB975 /* LocalVideoCell.swift in Sources */,
 				6E8C08311FA032B800970068 /* TouchViewController.swift in Sources */,
+				20CBF31A1FA6099500DEE0CA /* CardScrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
