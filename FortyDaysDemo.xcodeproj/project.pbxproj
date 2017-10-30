@@ -15,6 +15,12 @@
 		20BCAC7E1F9CB94E0053DC55 /* LocalVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BCAC7D1F9CB94E0053DC55 /* LocalVideoViewController.swift */; };
 		20CBF31A1FA6099500DEE0CA /* CardScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBF3191FA6099500DEE0CA /* CardScrollViewController.swift */; };
 		20CBF31C1FA6189F00DEE0CA /* CardScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBF31B1FA6189F00DEE0CA /* CardScrollCell.swift */; };
+		20CBF3241FA7629900DEE0CA /* gastronomy1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CBF31E1FA7629900DEE0CA /* gastronomy1.jpg */; };
+		20CBF3251FA7629900DEE0CA /* gastronomy2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CBF31F1FA7629900DEE0CA /* gastronomy2.jpg */; };
+		20CBF3261FA7629900DEE0CA /* gastronomy3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CBF3201FA7629900DEE0CA /* gastronomy3.jpg */; };
+		20CBF3271FA7629900DEE0CA /* gastronomy4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CBF3211FA7629900DEE0CA /* gastronomy4.jpg */; };
+		20CBF3281FA7629900DEE0CA /* gastronomy5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CBF3221FA7629900DEE0CA /* gastronomy5.jpg */; };
+		20CBF3291FA7629900DEE0CA /* gastronomy6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CBF3231FA7629900DEE0CA /* gastronomy6.jpg */; };
 		6E8C08121F9DC98000970068 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C08101F9DC98000970068 /* LocationViewController.swift */; };
 		6E8C08131F9DC98000970068 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8C08111F9DC98000970068 /* LocationViewController.xib */; };
 		6E8C081C1F9F0ED900970068 /* ColorGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C081B1F9F0ED900970068 /* ColorGradientViewController.swift */; };
@@ -58,6 +64,12 @@
 		20BCAC7D1F9CB94E0053DC55 /* LocalVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVideoViewController.swift; sourceTree = "<group>"; };
 		20CBF3191FA6099500DEE0CA /* CardScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScrollViewController.swift; sourceTree = "<group>"; };
 		20CBF31B1FA6189F00DEE0CA /* CardScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScrollCell.swift; sourceTree = "<group>"; };
+		20CBF31E1FA7629900DEE0CA /* gastronomy1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gastronomy1.jpg; sourceTree = "<group>"; };
+		20CBF31F1FA7629900DEE0CA /* gastronomy2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gastronomy2.jpg; sourceTree = "<group>"; };
+		20CBF3201FA7629900DEE0CA /* gastronomy3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gastronomy3.jpg; sourceTree = "<group>"; };
+		20CBF3211FA7629900DEE0CA /* gastronomy4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gastronomy4.jpg; sourceTree = "<group>"; };
+		20CBF3221FA7629900DEE0CA /* gastronomy5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gastronomy5.jpg; sourceTree = "<group>"; };
+		20CBF3231FA7629900DEE0CA /* gastronomy6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gastronomy6.jpg; sourceTree = "<group>"; };
 		6E8C08101F9DC98000970068 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		6E8C08111F9DC98000970068 /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		6E8C081B1F9F0ED900970068 /* ColorGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGradientViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +121,7 @@
 		2014F95B1F9CC15A005FB975 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				20CBF31D1FA7629900DEE0CA /* gastronomy */,
 				2014F95C1F9CC174005FB975 /* 测试视频.mov */,
 			);
 			path = resources;
@@ -130,6 +143,19 @@
 				20CBF31B1FA6189F00DEE0CA /* CardScrollCell.swift */,
 			);
 			path = "7.卡片式滑动";
+			sourceTree = "<group>";
+		};
+		20CBF31D1FA7629900DEE0CA /* gastronomy */ = {
+			isa = PBXGroup;
+			children = (
+				20CBF31E1FA7629900DEE0CA /* gastronomy1.jpg */,
+				20CBF31F1FA7629900DEE0CA /* gastronomy2.jpg */,
+				20CBF3201FA7629900DEE0CA /* gastronomy3.jpg */,
+				20CBF3211FA7629900DEE0CA /* gastronomy4.jpg */,
+				20CBF3221FA7629900DEE0CA /* gastronomy5.jpg */,
+				20CBF3231FA7629900DEE0CA /* gastronomy6.jpg */,
+			);
+			path = gastronomy;
 			sourceTree = "<group>";
 		};
 		20DBEDB71F9CA33F00C8580E /* 2.本地视频播放 */ = {
@@ -345,13 +371,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ED65A5C1F98814E001BB3FA /* TimerViewController.xib in Resources */,
+				20CBF3291FA7629900DEE0CA /* gastronomy6.jpg in Resources */,
 				6ED65A311F97422F001BB3FA /* LaunchScreen.storyboard in Resources */,
+				20CBF3251FA7629900DEE0CA /* gastronomy2.jpg in Resources */,
 				6ED65A2E1F97422F001BB3FA /* Assets.xcassets in Resources */,
+				20CBF3261FA7629900DEE0CA /* gastronomy3.jpg in Resources */,
 				2014F96E1FA0E03A005FB975 /* DateSelectionViewController.xib in Resources */,
 				2014F9671F9CC895005FB975 /* LocalVideoCell.xib in Resources */,
+				20CBF3271FA7629900DEE0CA /* gastronomy4.jpg in Resources */,
 				2014F95D1F9CC174005FB975 /* 测试视频.mov in Resources */,
+				20CBF3241FA7629900DEE0CA /* gastronomy1.jpg in Resources */,
 				6ED65A2C1F97422F001BB3FA /* Main.storyboard in Resources */,
 				6E8C08131F9DC98000970068 /* LocationViewController.xib in Resources */,
+				20CBF3281FA7629900DEE0CA /* gastronomy5.jpg in Resources */,
 				6EFFA6811FA06ABA00B2FCE9 /* TouchShowViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,7 +587,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FS54C7XV56;
+				DEVELOPMENT_TEAM = XXWC67NQ62;
 				INFOPLIST_FILE = FortyDaysDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tang.FortyDaysDemo;
@@ -570,7 +602,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FS54C7XV56;
+				DEVELOPMENT_TEAM = XXWC67NQ62;
 				INFOPLIST_FILE = FortyDaysDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tang.FortyDaysDemo;
