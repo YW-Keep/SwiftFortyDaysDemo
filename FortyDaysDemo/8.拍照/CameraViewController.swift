@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Photos
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     private lazy var pickVC: UIImagePickerController = {
@@ -47,34 +48,96 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate,UI
             } else {
                 print("没有相机可用")
             }
-        } else if authStatus == .notDetermined{
-            if !AVCaptureDevice.devices(for: AVMediaType.video).isEmpty {
-                AVCaptureDevice.requestAccess(for: AVMediaType.video) { granted in
-                    // 首次授权 用户没有给予照相机访问的权限 => 返回上一层处理
-                    DispatchQueue.main.async {
-                        if granted {
-                          self.openCamera()
-                        } else {
-                            self.navigationController?.popViewController(animated: true)
-                        }
+        } else if authStatus == .notDetermined {
+            AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (isAllow) in
+                if isAllow {
+                    if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                        self.pickVC.sourceType = .camera
+                        self.present(self.pickVC, animated: true, completion: nil)
+                    } else {
+                        print("没有相机可用")
                     }
                 }
-            }
+            })
+        } else {
+            //  弹出Aler弹窗 询问是否需要在设置中 开启照相机访问权限
+            let alert = UIAlertController(
+                title: "没有相机权限",
+                message: "现在就去设置里修改权限呀",
+                preferredStyle: UIAlertControllerStyle.alert
+            )
+            alert.addAction(UIAlertAction(title: "取消", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "现在就去", style: .cancel, handler: { (alert) -> Void in
+                UIApplication.shared.open((NSURL(string: UIApplicationOpenSettingsURLString)! as URL), options: [:], completionHandler: nil)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
     func openPhotoAlbum() {
-        pickVC.sourceType = .photoLibrary
-        self.present(pickVC, animated: true, completion: nil)
+        let authorizationStatus  =  PHPhotoLibrary.authorizationStatus()
+        if authorizationStatus == .authorized {
+            pickVC.sourceType = .photoLibrary
+            self.present(pickVC, animated: true, completion: nil)
+        } else if authorizationStatus == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({ (status) in
+                if(status == .authorized) {
+                    self.pickVC.sourceType = .photoLibrary
+                    self.present(self.pickVC, animated: true, completion: nil)
+                }
+            })
+        } else {
+            //  弹出Aler弹窗 询问是否需要在设置中 开启照相机访问权限
+            let alert = UIAlertController(
+                title: "没有相册权限呀",
+                message: "现在就去设置里修改权限呀",
+                preferredStyle: UIAlertControllerStyle.alert
+            )
+            alert.addAction(UIAlertAction(title: "取消", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "现在就去", style: .cancel, handler: { (alert) -> Void in
+                UIApplication.shared.open((NSURL(string: UIApplicationOpenSettingsURLString)! as URL), options: [:], completionHandler: nil)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
-    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: nil)
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image;
             if picker.sourceType == .camera {
-                UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(image:didFinishSavingWithError:contextInfo:)), nil)
+                self.addPicture(image)
             }
         }
-        picker.dismiss(animated: true, completion: nil)
+    }
+    func addPicture(_ image: UIImage) {
+        // 权限判断，如果允许就保存图片，没有权限就弹出弹框提示
+        let authorizationStatus  =  PHPhotoLibrary.authorizationStatus()
+        if authorizationStatus == .authorized {
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(image:didFinishSavingWithError:contextInfo:)), nil)
+        } else if authorizationStatus == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({ (status) in
+                if(status == .authorized) {
+                    UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(image:didFinishSavingWithError:contextInfo:)), nil)
+                }
+            })
+            
+        } else {
+            //  弹出Aler弹窗
+            let alert = UIAlertController(
+                title: "没有保存照片权限呀",
+                message: "现在就去设置里修改权限呀",
+                preferredStyle: UIAlertControllerStyle.alert
+            )
+            alert.addAction(UIAlertAction(title: "取消", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "现在就去", style: .cancel, handler: { (alert) -> Void in
+                UIApplication.shared.open((NSURL(string: UIApplicationOpenSettingsURLString)! as URL), options: [:], completionHandler: nil)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     // 保存图片回调
     @objc func image(image: UIImage, didFinishSavingWithError: NSError?, contextInfo: AnyObject) {
