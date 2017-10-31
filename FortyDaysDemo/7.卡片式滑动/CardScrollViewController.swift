@@ -12,7 +12,7 @@ class CardScrollViewController: UIViewController,UICollectionViewDataSource,UICo
     var dataArray:[(imageString:String,title:String)] = []
     // 在目标偏移量为当前偏移量时 会再调用scrollViewDidEndDragging  所以要排异调避免冲突
     var isIgnore = false
-    let conllectionView: UICollectionView =  {
+    lazy var conllectionView: UICollectionView =  {
         let layout  = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.horizontal
         layout.itemSize =  CGSize.init(width: (UIScreen.main.bounds.size.width - 120), height: (UIScreen.main.bounds.size.width - 120)*1.5)
@@ -22,6 +22,8 @@ class CardScrollViewController: UIViewController,UICollectionViewDataSource,UICo
         con.register(CardScrollCell.self, forCellWithReuseIdentifier: "CardScrollCell")
         con.backgroundColor = UIColor.white
         con.showsHorizontalScrollIndicator = false
+        con.dataSource = self
+        con.delegate = self
 //        con.isPagingEnabled = true
         return con
     }()
@@ -29,8 +31,7 @@ class CardScrollViewController: UIViewController,UICollectionViewDataSource,UICo
         super.viewDidLoad()
         self.title = "卡片式滑动"
         self.view.backgroundColor = UIColor.white
-        conllectionView.dataSource = self
-        conllectionView.delegate = self
+ 
         self.view.addSubview(conllectionView)
         self.getData()
         // Do any additional setup after loading the view.
