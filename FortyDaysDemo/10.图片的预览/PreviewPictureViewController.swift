@@ -34,10 +34,11 @@ class PreviewPictureViewController: UIViewController,UIScrollViewDelegate,UIGest
         // 移动手势
         var panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureAction(sender:)))
         panGesture.delegate = self
+        
         imageView.addGestureRecognizer(panGesture)
         
         imageView.isUserInteractionEnabled = true
-        
+        // 这样设置会有个小问题，一些设置的值会存在相互影响的可能性，这里就不再深入探究了，如果要效果好，用单一手势 然后做单一transform 修改 效果肯定杠杠的
         return imageView ;
     }()
     
@@ -50,11 +51,30 @@ class PreviewPictureViewController: UIViewController,UIScrollViewDelegate,UIGest
         scroll.delegate = self
         return scroll
     }()
+    
+    lazy var backImageView: UIImageView = {
+       let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight))
+        let image: UIImage = #imageLiteral(resourceName: "gastronomy2.jpg")
+        imgView.contentMode = .scaleAspectFill
+        imgView.layer.masksToBounds = true
+        let inputImage = CIImage(cgImage: image.cgImage!)
+        // 高斯模糊
+        let filter = CIFilter(name: "CIGaussianBlur")!
+        filter.setValue(inputImage, forKey: kCIInputImageKey)
+        filter.setValue(10, forKey: kCIInputRadiusKey)
+        let outputCIImage = filter.outputImage!
+        let rect = CGRect(origin: CGPoint.zero, size: image.size)
+        let cgImage = CIContext(options: nil).createCGImage(outputCIImage, from: rect)
+        //显示生成的模糊图片
+        imgView.image = UIImage(cgImage: cgImage!)
+        return imgView;
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "图片预览"
         self.view.backgroundColor = UIColor.white
+        self.view.addSubview(backImageView)
         self.view.addSubview(imageView)
         // Do any additional setup after loading the view.
     }
@@ -62,10 +82,10 @@ class PreviewPictureViewController: UIViewController,UIScrollViewDelegate,UIGest
     //旋转手势
     @objc func rotateGestureAction(sender: UIRotationGestureRecognizer) {
         //浮点类型，得到sender的旋转度数
-        let rotation : CGFloat =  sender.rotation
+        let rotation : CGFloat =  sender.rotation - rotationRem
+        rotationRem = sender.rotation
         //旋转角度CGAffineTransformMakeRotation,改变图像角度
-        imageView.transform = imageView.transform.rotated(by:(rotation - rotationRem))
-        rotationRem = rotation
+        imageView.transform = imageView.transform.rotated(by:rotation)
         //状态结束 返回原样
         if sender.state == UIGestureRecognizerState.ended{
             imageView.transform = CGAffineTransform(rotationAngle: 0)
@@ -75,9 +95,10 @@ class PreviewPictureViewController: UIViewController,UIScrollViewDelegate,UIGest
     // 捏合手势
     @objc func pinchGestureAciton(sender: UIPinchGestureRecognizer) {
        
-        let factor = sender.scale
-        imageView.transform = imageView.transform.scaledBy(x: factor/multiple, y: factor/multiple)
-        multiple = factor
+        let factor = sender.scale/multiple
+         multiple = sender.scale
+        imageView.transform = imageView.transform.scaledBy(x: factor, y: factor)
+       
         //状态是否结束，如果结束保存数据
         if sender.state == UIGestureRecognizerState.ended{
             imageView.transform = CGAffineTransform(scaleX: 1,y: 1)
@@ -89,9 +110,11 @@ class PreviewPictureViewController: UIViewController,UIScrollViewDelegate,UIGest
         //得到拖的过程中的xy坐标
         let translation : CGPoint = sender.translation(in: imageView)
         //平移图片CGAffineTransformMakeTranslation
-   
-        imageView.transform = imageView.transform.translatedBy(x: translation.x - point.x , y:  translation.y - point.y)
+        let ponitX = translation.x - point.x
+        let pointY = translation.y - point.y
         point = translation
+        imageView.transform = imageView.transform.translatedBy(x: ponitX, y: pointY)
+        
         if sender.state == UIGestureRecognizerState.ended{
             imageView.transform = CGAffineTransform(translationX: 0, y: 0)
             imageView.frame = CGRect(x: 0, y: (kScreenHeight - 300 - 64)/2.0, width: kScreenWidth, height: 300)
