@@ -107,12 +107,15 @@ class TimerViewController: UIViewController,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = UITableViewCell.init(style: UITableViewCellStyle.value1, reuseIdentifier: "Timer")
+        var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "Timer")
+        if cell == nil {
+           cell = UITableViewCell.init(style: UITableViewCellStyle.value1, reuseIdentifier: "Timer")
+        }
         let title  = "计次" + String(indexPath.row + 1)
-        cell.textLabel?.text = title
-        cell.detailTextLabel?.text = listArray[indexPath.row]
-        cell.detailTextLabel?.font = UIFont(name: "Menlo-Italic", size: 15)
-        return cell
+        cell!.textLabel?.text = title
+        cell!.detailTextLabel?.text = listArray[indexPath.row]
+        cell!.detailTextLabel?.font = UIFont(name: "Menlo-Italic", size: 15)
+        return cell!
     }
     deinit {
         print("定时器页面释放")
