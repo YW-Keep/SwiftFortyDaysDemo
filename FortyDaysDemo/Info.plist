@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>我要用相机呀 </string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>我要写入相册呀</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>我要用相册呀</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>china</string>
 	<key>CFBundleDisplayName</key>
@@ -28,10 +22,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>我要用相机呀 </string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>我要一直定位呀</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>定位呀我要</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>我要写入相册呀</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>我要用相册呀</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -40,6 +40,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
