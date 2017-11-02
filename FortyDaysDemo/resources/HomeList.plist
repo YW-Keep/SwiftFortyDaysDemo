@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>计时器</string>
+		<key>controller</key>
+		<string>TimerViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>本地视频播放</string>
+		<key>controller</key>
+		<string>LocalVideoViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>定位</string>
+		<key>controller</key>
+		<string>LocationViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>颜色渐变</string>
+		<key>controller</key>
+		<string>ColorGradientViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>3D Touch</string>
+		<key>controller</key>
+		<string>TouchViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>日志选择器（数字转轮）</string>
+		<key>controller</key>
+		<string>DateSelectionViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>卡片式滑动</string>
+		<key>controller</key>
+		<string>CardScrollViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>拍照(从相册选取)</string>
+		<key>controller</key>
+		<string>CameraViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>上拉刷新下拉加载</string>
+		<key>controller</key>
+		<string>RefreshViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>图片预览</string>
+		<key>controller</key>
+		<string>PreviewPictureViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>列表颜色渐变</string>
+		<key>controller</key>
+		<string>TableViewGradientController</string>
+	</dict>
+</array>
+</plist>
