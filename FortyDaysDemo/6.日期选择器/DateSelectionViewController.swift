@@ -26,6 +26,7 @@ class DateSelectionViewController: UIViewController,UIPickerViewDelegate,UIPicke
         pickerView.selectRow(8000, inComponent: 0, animated: true)
         pickerView.selectRow(8000, inComponent: 1, animated: true)
         pickerView.selectRow(8000, inComponent: 2, animated: true)
+        pickerView.isUserInteractionEnabled = false
     }
     
     override func viewDidDisappear(_ animated: Bool) {
