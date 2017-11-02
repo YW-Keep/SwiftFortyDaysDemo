@@ -60,7 +60,6 @@ class DateSelectionViewController: UIViewController,UIPickerViewDelegate,UIPicke
         thirdNum = Int(190 + arc4random_uniform(10))
         print("\(firstNum) + \(secondNum) + \(thirdNum)")
         timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(self.replyAction), userInfo: nil, repeats: true)
-        RunLoop.current.add(timer, forMode: RunLoopMode.commonModes)
     }
     @objc func replyAction() {
         if firstNum > 0 {

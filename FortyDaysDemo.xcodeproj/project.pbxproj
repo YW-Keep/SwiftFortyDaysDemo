@@ -41,6 +41,8 @@
 		6ED65A471F97422F001BB3FA /* FortyDaysDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED65A461F97422F001BB3FA /* FortyDaysDemoUITests.swift */; };
 		6ED65A5B1F98814E001BB3FA /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED65A591F98814E001BB3FA /* TimerViewController.swift */; };
 		6ED65A5C1F98814E001BB3FA /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ED65A5A1F98814E001BB3FA /* TimerViewController.xib */; };
+		6EEAA0D11FAB0475007E69E0 /* LoginAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEAA0D01FAB0475007E69E0 /* LoginAnimationViewController.swift */; };
+		6EEAA0D51FAB0A4A007E69E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEAA0D41FAB0A4A007E69E0 /* LoginViewController.swift */; };
 		6EFFA6801FA06ABA00B2FCE9 /* TouchShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFFA67E1FA06ABA00B2FCE9 /* TouchShowViewController.swift */; };
 		6EFFA6811FA06ABA00B2FCE9 /* TouchShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EFFA67F1FA06ABA00B2FCE9 /* TouchShowViewController.xib */; };
 /* End PBXBuildFile section */
@@ -103,6 +105,8 @@
 		6ED65A481F97422F001BB3FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ED65A591F98814E001BB3FA /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		6ED65A5A1F98814E001BB3FA /* TimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
+		6EEAA0D01FAB0475007E69E0 /* LoginAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnimationViewController.swift; sourceTree = "<group>"; };
+		6EEAA0D41FAB0A4A007E69E0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6EFFA67E1FA06ABA00B2FCE9 /* TouchShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchShowViewController.swift; sourceTree = "<group>"; };
 		6EFFA67F1FA06ABA00B2FCE9 /* TouchShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouchShowViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -289,6 +293,7 @@
 				6E02FEA11FA96F0C00BC5614 /* 9.下拉刷新与上拉加载 */,
 				6E02FEA71FA9A99600BC5614 /* 10.图片的预览 */,
 				6E02FEAA1FAAB87100BC5614 /* 11.tableView颜色渐变 */,
+				6EEAA0CF1FAB043B007E69E0 /* 12.登录页面动画 */,
 				2014F95B1F9CC15A005FB975 /* resources */,
 				6ED65A2D1F97422F001BB3FA /* Assets.xcassets */,
 				6ED65A2F1F97422F001BB3FA /* LaunchScreen.storyboard */,
@@ -322,6 +327,15 @@
 				6ED65A5A1F98814E001BB3FA /* TimerViewController.xib */,
 			);
 			path = "1.计时器";
+			sourceTree = "<group>";
+		};
+		6EEAA0CF1FAB043B007E69E0 /* 12.登录页面动画 */ = {
+			isa = PBXGroup;
+			children = (
+				6EEAA0D01FAB0475007E69E0 /* LoginAnimationViewController.swift */,
+				6EEAA0D41FAB0A4A007E69E0 /* LoginViewController.swift */,
+			);
+			path = "12.登录页面动画";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,7 +490,9 @@
 				6EFFA6801FA06ABA00B2FCE9 /* TouchShowViewController.swift in Sources */,
 				6ED65A291F97422F001BB3FA /* ViewController.swift in Sources */,
 				6E02FEA91FA9A9C100BC5614 /* PreviewPictureViewController.swift in Sources */,
+				6EEAA0D51FAB0A4A007E69E0 /* LoginViewController.swift in Sources */,
 				6ED65A5B1F98814E001BB3FA /* TimerViewController.swift in Sources */,
+				6EEAA0D11FAB0475007E69E0 /* LoginAnimationViewController.swift in Sources */,
 				2014F96D1FA0E03A005FB975 /* DateSelectionViewController.swift in Sources */,
 				6E02FEA61FA970D000BC5614 /* Macro.swift in Sources */,
 				6E02FEA31FA96F3800BC5614 /* RefreshViewController.swift in Sources */,

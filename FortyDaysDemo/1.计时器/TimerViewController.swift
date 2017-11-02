@@ -56,7 +56,7 @@ class TimerViewController: UIViewController,UITableViewDataSource {
     @IBAction func rightButtonAction(_ sender: UIButton) {
     
         if sender.title(for: UIControlState.normal) == "启动" {
-            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.replyAction), userInfo: nil, repeats: true)
+            timer = Timer.init(timeInterval: 0.01, target: self, selector: #selector(self.replyAction), userInfo: nil, repeats: true)
             RunLoop.current.add(timer, forMode: RunLoopMode.commonModes)
             sender.backgroundColor = UIColor(red: 177/255.0, green: 31/255.0, blue: 0/255.0, alpha: 0.5)
             sender.setTitle("停止", for: UIControlState.normal)

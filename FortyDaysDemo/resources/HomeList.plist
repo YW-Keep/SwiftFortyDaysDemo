@@ -68,5 +68,11 @@
 		<key>controller</key>
 		<string>TableViewGradientController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>登录页面动画</string>
+		<key>controller</key>
+		<string>LoginAnimationViewController</string>
+	</dict>
 </array>
 </plist>
