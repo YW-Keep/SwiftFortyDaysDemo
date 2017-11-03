@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RefreshViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class RefreshViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var dataNum = 2
     
     lazy var refreshCol: UIRefreshControl = {

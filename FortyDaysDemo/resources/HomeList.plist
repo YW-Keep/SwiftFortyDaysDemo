@@ -74,5 +74,11 @@
 		<key>controller</key>
 		<string>LoginAnimationViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>tableView侧滑多个按钮</string>
+		<key>controller</key>
+		<string>LateralSpreadsViewController</string>
+	</dict>
 </array>
 </plist>
