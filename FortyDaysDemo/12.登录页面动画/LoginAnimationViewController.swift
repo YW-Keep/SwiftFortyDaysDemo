@@ -18,8 +18,10 @@ class LoginAnimationViewController: UIViewController {
     }()
     
     lazy var loginButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 40, y: kScreenHeight - 100, width: kScreenWidth - 80, height: 50))
+        let button = UIButton(type: .system)
+        button.frame = CGRect(x: 40, y: kScreenHeight - 100, width: kScreenWidth - 80, height: 50)
         button.setTitle("登录", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
         button.backgroundColor = UIColor(red: 253/255.0, green: 149/255.0, blue: 157/255.0, alpha: 1)
         button.addTarget(self, action: #selector(loginAction), for: .touchUpInside)
         button.layer.cornerRadius = 10
