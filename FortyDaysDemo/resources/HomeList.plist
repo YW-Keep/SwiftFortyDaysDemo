@@ -80,5 +80,11 @@
 		<key>controller</key>
 		<string>LateralSpreadsViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>基础动画</string>
+		<key>controller</key>
+		<string>BaseAnimationViewController</string>
+	</dict>
 </array>
 </plist>
