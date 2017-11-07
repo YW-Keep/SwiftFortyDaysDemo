@@ -32,6 +32,7 @@
 		6E02FEAE1FAABE9400BC5614 /* HomeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E02FEAD1FAABE9400BC5614 /* HomeList.plist */; };
 		6E0CF2601FA857D20033A915 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CF25E1FA857D20033A915 /* CameraViewController.swift */; };
 		6E0CF2611FA857D20033A915 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CF25F1FA857D20033A915 /* CameraViewController.xib */; };
+		6E0D110C1FB184A3003339AC /* NavgationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D110B1FB184A3003339AC /* NavgationHelper.swift */; };
 		6E8C08121F9DC98000970068 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C08101F9DC98000970068 /* LocationViewController.swift */; };
 		6E8C08131F9DC98000970068 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8C08111F9DC98000970068 /* LocationViewController.xib */; };
 		6E8C081C1F9F0ED900970068 /* ColorGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C081B1F9F0ED900970068 /* ColorGradientViewController.swift */; };
@@ -51,6 +52,7 @@
 		6EEAA0DE1FAFFAB7007E69E0 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEAA0DD1FAFFAB7007E69E0 /* CoreDataViewController.swift */; };
 		6EEAA0E41FB002DE007E69E0 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EEAA0E21FB002DE007E69E0 /* Model.xcdatamodeld */; };
 		6EEAA12F1FB0369F007E69E0 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEAA12E1FB0369F007E69E0 /* CoreDataStack.swift */; };
+		6EFA7DBC1FB1948900565FAC /* NavigationChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA7DBB1FB1948900565FAC /* NavigationChangeViewController.swift */; };
 		6EFFA6801FA06ABA00B2FCE9 /* TouchShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFFA67E1FA06ABA00B2FCE9 /* TouchShowViewController.swift */; };
 		6EFFA6811FA06ABA00B2FCE9 /* TouchShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EFFA67F1FA06ABA00B2FCE9 /* TouchShowViewController.xib */; };
 /* End PBXBuildFile section */
@@ -98,6 +100,7 @@
 		6E02FEAD1FAABE9400BC5614 /* HomeList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HomeList.plist; sourceTree = "<group>"; };
 		6E0CF25E1FA857D20033A915 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		6E0CF25F1FA857D20033A915 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		6E0D110B1FB184A3003339AC /* NavgationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavgationHelper.swift; sourceTree = "<group>"; };
 		6E8C08101F9DC98000970068 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		6E8C08111F9DC98000970068 /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		6E8C081B1F9F0ED900970068 /* ColorGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGradientViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		6EEAA0DD1FAFFAB7007E69E0 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		6EEAA0E31FB002DE007E69E0 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6EEAA12E1FB0369F007E69E0 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		6EFA7DBB1FB1948900565FAC /* NavigationChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationChangeViewController.swift; sourceTree = "<group>"; };
 		6EFFA67E1FA06ABA00B2FCE9 /* TouchShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchShowViewController.swift; sourceTree = "<group>"; };
 		6EFFA67F1FA06ABA00B2FCE9 /* TouchShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouchShowViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -325,6 +329,7 @@
 				6EEAA0D61FAC481D007E69E0 /* 13.tableView侧滑多个按钮 */,
 				20F5B4251FAD9ECD00824C3F /* 14.基础动画 */,
 				6EEAA0DC1FAFFAAA007E69E0 /* 15.CoreData */,
+				6EEAA1321FB15324007E69E0 /* 16.导航栏平滑切换 */,
 				2014F95B1F9CC15A005FB975 /* resources */,
 				6ED65A2D1F97422F001BB3FA /* Assets.xcassets */,
 				6ED65A2F1F97422F001BB3FA /* LaunchScreen.storyboard */,
@@ -384,6 +389,15 @@
 				6EEAA12E1FB0369F007E69E0 /* CoreDataStack.swift */,
 			);
 			path = 15.CoreData;
+			sourceTree = "<group>";
+		};
+		6EEAA1321FB15324007E69E0 /* 16.导航栏平滑切换 */ = {
+			isa = PBXGroup;
+			children = (
+				6E0D110B1FB184A3003339AC /* NavgationHelper.swift */,
+				6EFA7DBB1FB1948900565FAC /* NavigationChangeViewController.swift */,
+			);
+			path = "16.导航栏平滑切换";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,6 +554,7 @@
 				6EEAA12F1FB0369F007E69E0 /* CoreDataStack.swift in Sources */,
 				6E02FEA91FA9A9C100BC5614 /* PreviewPictureViewController.swift in Sources */,
 				6EEAA0D51FAB0A4A007E69E0 /* LoginViewController.swift in Sources */,
+				6EFA7DBC1FB1948900565FAC /* NavigationChangeViewController.swift in Sources */,
 				6ED65A5B1F98814E001BB3FA /* TimerViewController.swift in Sources */,
 				20F5B42B1FADB20C00824C3F /* CoreAnimationViewController.swift in Sources */,
 				20F5B42D1FADEF8800824C3F /* EmitterViewController.swift in Sources */,
@@ -553,6 +568,7 @@
 				6E02FEA31FA96F3800BC5614 /* RefreshViewController.swift in Sources */,
 				6E0CF2601FA857D20033A915 /* CameraViewController.swift in Sources */,
 				20BCAC7E1F9CB94E0053DC55 /* LocalVideoViewController.swift in Sources */,
+				6E0D110C1FB184A3003339AC /* NavgationHelper.swift in Sources */,
 				6E8C08121F9DC98000970068 /* LocationViewController.swift in Sources */,
 				6E8C081C1F9F0ED900970068 /* ColorGradientViewController.swift in Sources */,
 				6ED65A271F97422F001BB3FA /* AppDelegate.swift in Sources */,

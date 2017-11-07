@@ -22,6 +22,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         // 修改返回按钮上的字
         let backButton = UIBarButtonItem.init()
         backButton.title = ""
+        self.navBarAlpha = 1
         self.navigationItem.backBarButtonItem = backButton
     }
     

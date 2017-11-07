@@ -92,5 +92,11 @@
 		<key>controller</key>
 		<string>CoreDataViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>导航栏平滑切换</string>
+		<key>controller</key>
+		<string>NavigationChangeViewController</string>
+	</dict>
 </array>
 </plist>
