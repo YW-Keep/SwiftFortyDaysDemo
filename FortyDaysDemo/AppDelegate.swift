@@ -48,9 +48,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         // Home Screen Quick Actions 在这里写处理方法哦 这里需要在应用已被启动后调用
         print(shortcutItem.type)
+    }
+    
+    // 这里是搜索的回调哦
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        let nav = self.window?.rootViewController
+        let num = userActivity.userInfo!["kCSSearchableItemActivityIdentifier"]! as! String
+        
+       let array = [("gastronomy1","菠萝饼","这东西看上去好吃啊"),("gastronomy2","煎虾仁","这个也不错"),("gastronomy3","红烧肉","晚上看这个会饿啊"),("gastronomy4","羊肉串","都好吃，都好吃"),("gastronomy5","芝士大虾","哈哈哈哈哈"),("gastronomy6","香炒老豆腐","我实在是编不下去了,我实在是编不下去了,我实在是编不下去了")]
+        
+        let col = SearchDetailViewController(data: array[Int(num)!])
+        nav?.show(col, sender: nil)
+        
+        return true
     }
 }
 

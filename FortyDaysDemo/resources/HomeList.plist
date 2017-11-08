@@ -98,5 +98,11 @@
 		<key>controller</key>
 		<string>NavigationChangeViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>搜索</string>
+		<key>controller</key>
+		<string>SearchViewController</string>
+	</dict>
 </array>
 </plist>

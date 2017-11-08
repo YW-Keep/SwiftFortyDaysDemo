@@ -33,6 +33,11 @@
 		6E0CF2601FA857D20033A915 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CF25E1FA857D20033A915 /* CameraViewController.swift */; };
 		6E0CF2611FA857D20033A915 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CF25F1FA857D20033A915 /* CameraViewController.xib */; };
 		6E0D110C1FB184A3003339AC /* NavgationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D110B1FB184A3003339AC /* NavgationHelper.swift */; };
+		6E7539DB1FB2936100587BE5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7539DA1FB2936100587BE5 /* SearchViewController.swift */; };
+		6E7539DE1FB2992800587BE5 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7539DC1FB2992800587BE5 /* SearchTableViewCell.swift */; };
+		6E7539DF1FB2992800587BE5 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E7539DD1FB2992800587BE5 /* SearchTableViewCell.xib */; };
+		6E7539E21FB2995500587BE5 /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7539E01FB2995500587BE5 /* SearchDetailViewController.swift */; };
+		6E7539E31FB2995500587BE5 /* SearchDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E7539E11FB2995500587BE5 /* SearchDetailViewController.xib */; };
 		6E8C08121F9DC98000970068 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C08101F9DC98000970068 /* LocationViewController.swift */; };
 		6E8C08131F9DC98000970068 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8C08111F9DC98000970068 /* LocationViewController.xib */; };
 		6E8C081C1F9F0ED900970068 /* ColorGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C081B1F9F0ED900970068 /* ColorGradientViewController.swift */; };
@@ -101,6 +106,11 @@
 		6E0CF25E1FA857D20033A915 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		6E0CF25F1FA857D20033A915 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		6E0D110B1FB184A3003339AC /* NavgationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavgationHelper.swift; sourceTree = "<group>"; };
+		6E7539DA1FB2936100587BE5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6E7539DC1FB2992800587BE5 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		6E7539DD1FB2992800587BE5 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		6E7539E01FB2995500587BE5 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		6E7539E11FB2995500587BE5 /* SearchDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDetailViewController.xib; sourceTree = "<group>"; };
 		6E8C08101F9DC98000970068 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		6E8C08111F9DC98000970068 /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		6E8C081B1F9F0ED900970068 /* ColorGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGradientViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +270,18 @@
 			path = "8.拍照";
 			sourceTree = "<group>";
 		};
+		6E7539D91FB2934E00587BE5 /* 17.搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				6E7539DA1FB2936100587BE5 /* SearchViewController.swift */,
+				6E7539DC1FB2992800587BE5 /* SearchTableViewCell.swift */,
+				6E7539DD1FB2992800587BE5 /* SearchTableViewCell.xib */,
+				6E7539E01FB2995500587BE5 /* SearchDetailViewController.swift */,
+				6E7539E11FB2995500587BE5 /* SearchDetailViewController.xib */,
+			);
+			path = "17.搜索";
+			sourceTree = "<group>";
+		};
 		6E8C080F1F9DC8AD00970068 /* 3.定位 */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +352,7 @@
 				20F5B4251FAD9ECD00824C3F /* 14.基础动画 */,
 				6EEAA0DC1FAFFAAA007E69E0 /* 15.CoreData */,
 				6EEAA1321FB15324007E69E0 /* 16.导航栏平滑切换 */,
+				6E7539D91FB2934E00587BE5 /* 17.搜索 */,
 				2014F95B1F9CC15A005FB975 /* resources */,
 				6ED65A2D1F97422F001BB3FA /* Assets.xcassets */,
 				6ED65A2F1F97422F001BB3FA /* LaunchScreen.storyboard */,
@@ -518,11 +541,13 @@
 				2014F96E1FA0E03A005FB975 /* DateSelectionViewController.xib in Resources */,
 				2014F9671F9CC895005FB975 /* LocalVideoCell.xib in Resources */,
 				20CBF3271FA7629900DEE0CA /* gastronomy4.jpg in Resources */,
+				6E7539DF1FB2992800587BE5 /* SearchTableViewCell.xib in Resources */,
 				2014F95D1F9CC174005FB975 /* 测试视频.mov in Resources */,
 				20CBF3241FA7629900DEE0CA /* gastronomy1.jpg in Resources */,
 				6ED65A2C1F97422F001BB3FA /* Main.storyboard in Resources */,
 				6E8C08131F9DC98000970068 /* LocationViewController.xib in Resources */,
 				20CBF3281FA7629900DEE0CA /* gastronomy5.jpg in Resources */,
+				6E7539E31FB2995500587BE5 /* SearchDetailViewController.xib in Resources */,
 				6EFFA6811FA06ABA00B2FCE9 /* TouchShowViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,11 +573,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E7539DB1FB2936100587BE5 /* SearchViewController.swift in Sources */,
 				6E02FEAC1FAAB8FB00BC5614 /* TableViewGradientController.swift in Sources */,
 				6EFFA6801FA06ABA00B2FCE9 /* TouchShowViewController.swift in Sources */,
 				6ED65A291F97422F001BB3FA /* ViewController.swift in Sources */,
 				6EEAA12F1FB0369F007E69E0 /* CoreDataStack.swift in Sources */,
 				6E02FEA91FA9A9C100BC5614 /* PreviewPictureViewController.swift in Sources */,
+				6E7539E21FB2995500587BE5 /* SearchDetailViewController.swift in Sources */,
 				6EEAA0D51FAB0A4A007E69E0 /* LoginViewController.swift in Sources */,
 				6EFA7DBC1FB1948900565FAC /* NavigationChangeViewController.swift in Sources */,
 				6ED65A5B1F98814E001BB3FA /* TimerViewController.swift in Sources */,
@@ -576,6 +603,7 @@
 				20F5B4291FADA35F00824C3F /* PositionAnimationViewController.swift in Sources */,
 				2014F9661F9CC895005FB975 /* LocalVideoCell.swift in Sources */,
 				6E8C08311FA032B800970068 /* TouchViewController.swift in Sources */,
+				6E7539DE1FB2992800587BE5 /* SearchTableViewCell.swift in Sources */,
 				20CBF31A1FA6099500DEE0CA /* CardScrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
