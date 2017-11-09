@@ -104,5 +104,11 @@
 		<key>controller</key>
 		<string>SearchViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>横竖屏切换</string>
+		<key>controller</key>
+		<string>ScreenSwitchViewController</string>
+	</dict>
 </array>
 </plist>
