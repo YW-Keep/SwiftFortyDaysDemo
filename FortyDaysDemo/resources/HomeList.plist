@@ -110,5 +110,11 @@
 		<key>controller</key>
 		<string>ScreenSwitchViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>视屏背景</string>
+		<key>controller</key>
+		<string>VideoBackGroundViewController</string>
+	</dict>
 </array>
 </plist>

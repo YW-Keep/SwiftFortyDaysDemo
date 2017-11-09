@@ -40,6 +40,8 @@
 		6E7539E31FB2995500587BE5 /* SearchDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E7539E11FB2995500587BE5 /* SearchDetailViewController.xib */; };
 		6E7539E71FB3E41D00587BE5 /* ScreenSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7539E51FB3E41D00587BE5 /* ScreenSwitchViewController.swift */; };
 		6E7539E81FB3E41D00587BE5 /* ScreenSwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E7539E61FB3E41D00587BE5 /* ScreenSwitchViewController.xib */; };
+		6E7539ED1FB42A3000587BE5 /* VideoBackGroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7539EC1FB42A3000587BE5 /* VideoBackGroundViewController.swift */; };
+		6E7539EF1FB434C900587BE5 /* 背景视频.mov in Resources */ = {isa = PBXBuildFile; fileRef = 6E7539EE1FB434C900587BE5 /* 背景视频.mov */; };
 		6E8C08121F9DC98000970068 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C08101F9DC98000970068 /* LocationViewController.swift */; };
 		6E8C08131F9DC98000970068 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8C08111F9DC98000970068 /* LocationViewController.xib */; };
 		6E8C081C1F9F0ED900970068 /* ColorGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C081B1F9F0ED900970068 /* ColorGradientViewController.swift */; };
@@ -115,6 +117,8 @@
 		6E7539E11FB2995500587BE5 /* SearchDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDetailViewController.xib; sourceTree = "<group>"; };
 		6E7539E51FB3E41D00587BE5 /* ScreenSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSwitchViewController.swift; sourceTree = "<group>"; };
 		6E7539E61FB3E41D00587BE5 /* ScreenSwitchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenSwitchViewController.xib; sourceTree = "<group>"; };
+		6E7539EC1FB42A3000587BE5 /* VideoBackGroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoBackGroundViewController.swift; sourceTree = "<group>"; };
+		6E7539EE1FB434C900587BE5 /* 背景视频.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "背景视频.mov"; sourceTree = "<group>"; };
 		6E8C08101F9DC98000970068 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		6E8C08111F9DC98000970068 /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		6E8C081B1F9F0ED900970068 /* ColorGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGradientViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			children = (
 				20CBF31D1FA7629900DEE0CA /* gastronomy */,
 				2014F95C1F9CC174005FB975 /* 测试视频.mov */,
+				6E7539EE1FB434C900587BE5 /* 背景视频.mov */,
 				6E02FEAD1FAABE9400BC5614 /* HomeList.plist */,
 				6EEAA0E21FB002DE007E69E0 /* Model.xcdatamodeld */,
 			);
@@ -295,6 +300,14 @@
 			path = "18.横竖屏切换";
 			sourceTree = "<group>";
 		};
+		6E7539EB1FB429F100587BE5 /* 19.视屏作为页面背景 */ = {
+			isa = PBXGroup;
+			children = (
+				6E7539EC1FB42A3000587BE5 /* VideoBackGroundViewController.swift */,
+			);
+			path = "19.视屏作为页面背景";
+			sourceTree = "<group>";
+		};
 		6E8C080F1F9DC8AD00970068 /* 3.定位 */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +380,7 @@
 				6EEAA1321FB15324007E69E0 /* 16.导航栏平滑切换 */,
 				6E7539D91FB2934E00587BE5 /* 17.搜索 */,
 				6E7539E41FB3E27700587BE5 /* 18.横竖屏切换 */,
+				6E7539EB1FB429F100587BE5 /* 19.视屏作为页面背景 */,
 				2014F95B1F9CC15A005FB975 /* resources */,
 				6ED65A2D1F97422F001BB3FA /* Assets.xcassets */,
 				6ED65A2F1F97422F001BB3FA /* LaunchScreen.storyboard */,
@@ -558,6 +572,7 @@
 				20CBF3271FA7629900DEE0CA /* gastronomy4.jpg in Resources */,
 				6E7539DF1FB2992800587BE5 /* SearchTableViewCell.xib in Resources */,
 				2014F95D1F9CC174005FB975 /* 测试视频.mov in Resources */,
+				6E7539EF1FB434C900587BE5 /* 背景视频.mov in Resources */,
 				20CBF3241FA7629900DEE0CA /* gastronomy1.jpg in Resources */,
 				6ED65A2C1F97422F001BB3FA /* Main.storyboard in Resources */,
 				6E8C08131F9DC98000970068 /* LocationViewController.xib in Resources */,
@@ -590,6 +605,7 @@
 			files = (
 				6E7539DB1FB2936100587BE5 /* SearchViewController.swift in Sources */,
 				6E02FEAC1FAAB8FB00BC5614 /* TableViewGradientController.swift in Sources */,
+				6E7539ED1FB42A3000587BE5 /* VideoBackGroundViewController.swift in Sources */,
 				6EFFA6801FA06ABA00B2FCE9 /* TouchShowViewController.swift in Sources */,
 				6ED65A291F97422F001BB3FA /* ViewController.swift in Sources */,
 				6EEAA12F1FB0369F007E69E0 /* CoreDataStack.swift in Sources */,
