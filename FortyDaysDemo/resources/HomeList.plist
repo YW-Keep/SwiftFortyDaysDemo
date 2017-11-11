@@ -116,5 +116,11 @@
 		<key>controller</key>
 		<string>VideoBackGroundViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>简略朋友圈</string>
+		<key>controller</key>
+		<string>FriendsCircleViewController</string>
+	</dict>
 </array>
 </plist>

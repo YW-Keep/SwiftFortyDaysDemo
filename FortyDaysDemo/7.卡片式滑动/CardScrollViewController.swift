@@ -57,7 +57,7 @@ class CardScrollViewController: UIViewController,UICollectionViewDataSource,UICo
         let data = dataArray[indexPath.row];
         cell.titleLabel?.text = data.title
         let path  = Bundle.main.path(forResource: data.imageString, ofType: "jpg")
-        cell.imgView?.image = UIImage.init(contentsOfFile: path!)
+        cell.imgView?.image = UIImage(contentsOfFile: path!)
         cell.backgroundColor = UIColor.lightGray
         
         return cell
