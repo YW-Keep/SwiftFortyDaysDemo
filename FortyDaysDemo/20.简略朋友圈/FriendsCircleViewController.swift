@@ -33,6 +33,7 @@ class FriendsCircleViewController: UIViewController, UITableViewDataSource, UITa
         getData()
         // Do any additional setup after loading the view.
     }
+    
     private func getData() {
         let model1 = FriendsMessage(messageName: "阿狸", messageIcon: "HeadIconImg", messageContent: "测试数据测试数据测试数据测试数据", messageImages: [])
         let model2 = FriendsMessage(messageName: "阿狸", messageIcon: "HeadIconImg", messageContent: "测试数据测试数据测试数据测试数据", messageImages: ["1","3","4"])

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardScrollViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+class CardScrollViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var dataArray:[(imageString:String,title:String)] = []
     // 在目标偏移量为当前偏移量时 会再调用scrollViewDidEndDragging  所以要排异调避免冲突
     var isIgnore = false
@@ -18,7 +18,7 @@ class CardScrollViewController: UIViewController,UICollectionViewDataSource,UICo
         layout.itemSize =  CGSize.init(width: (UIScreen.main.bounds.size.width - 120), height: (UIScreen.main.bounds.size.width - 120)*1.5)
         layout.sectionInset = UIEdgeInsetsMake(0, 60, 0, 60)
         layout.minimumLineSpacing = 20
-        let con = UICollectionView.init(frame: CGRect.init(x: 0, y: 100, width: UIScreen.main.bounds.size.width, height: (UIScreen.main.bounds.size.width - 120)*1.5), collectionViewLayout: layout)
+        let con = UICollectionView.init(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.size.width, height: (UIScreen.main.bounds.size.width - 120)*1.5), collectionViewLayout: layout)
         con.register(CardScrollCell.self, forCellWithReuseIdentifier: "CardScrollCell")
         con.backgroundColor = UIColor.white
         con.showsHorizontalScrollIndicator = false

@@ -21,10 +21,12 @@ class FriendsCircleCell: UITableViewCell {
             guard (model != nil) else {
                 return
             }
+            // 设置值
             nameLabel.text = model!.messageName
             contentLabel.text = model!.messageContent
             iconImgView.image = UIImage(named: model!.messageIcon)
             
+            // 修改imageView的约束
             let imgWidth = (kScreenWidth - 60*2 - 10*2)/3.0
             let num = (model!.messageImages.count + 2)/3
             imgViewHeightConstraint.constant = 10 + (imgWidth + 10)*CGFloat(num)
@@ -60,8 +62,11 @@ class FriendsCircleCell: UITableViewCell {
     }
     
     @objc func showImage(tap: UITapGestureRecognizer) {
+        // 点击后浏览图片
         let num = (tap.view?.tag)! - 210
-        let showView = ShowPictureScrollView(images: [(model?.messageImages[num])!])
+        let window = UIApplication.shared.delegate?.window
+        let rect = tap.view?.convert((tap.view?.bounds)!, to: window!!)
+        let showView = ShowPictureView(images: model!.messageImages, pageNum: num,startRect:rect!)
         showView.show()
     }
     

@@ -114,7 +114,7 @@ class PreviewPictureViewController: UIViewController,UIScrollViewDelegate,UIGest
         let pointY = translation.y - point.y
         point = translation
         imageView.transform = imageView.transform.translatedBy(x: ponitX, y: pointY)
-        
+//        imageView.transform.concatenating(<#T##t2: CGAffineTransform##CGAffineTransform#>)
         if sender.state == UIGestureRecognizerState.ended{
             imageView.transform = CGAffineTransform(translationX: 0, y: 0)
             imageView.frame = CGRect(x: 0, y: (kScreenHeight - 300 - 64)/2.0, width: kScreenWidth, height: 300)
@@ -125,6 +125,7 @@ class PreviewPictureViewController: UIViewController,UIScrollViewDelegate,UIGest
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
+
     
     //MARK: - UIScrollViewDelegate
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
