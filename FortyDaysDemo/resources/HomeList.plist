@@ -122,5 +122,11 @@
 		<key>controller</key>
 		<string>FriendsCircleViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>瀑布流</string>
+		<key>controller</key>
+		<string>WaterfallFlowViewController</string>
+	</dict>
 </array>
 </plist>
