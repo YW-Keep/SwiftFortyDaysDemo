@@ -33,6 +33,15 @@
 		6E0CF2601FA857D20033A915 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CF25E1FA857D20033A915 /* CameraViewController.swift */; };
 		6E0CF2611FA857D20033A915 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CF25F1FA857D20033A915 /* CameraViewController.xib */; };
 		6E0D110C1FB184A3003339AC /* NavgationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D110B1FB184A3003339AC /* NavgationHelper.swift */; };
+		6E1288631FBD2C7300FE7F13 /* RecorderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1288621FBD2C7300FE7F13 /* RecorderManager.swift */; };
+		6E1288661FBD320700FE7F13 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1288641FBD320700FE7F13 /* AudioViewController.swift */; };
+		6E1288671FBD320700FE7F13 /* AudioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1288651FBD320700FE7F13 /* AudioViewController.xib */; };
+		6E12886A1FBD32A900FE7F13 /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1288681FBD32A900FE7F13 /* RecorderViewController.swift */; };
+		6E12886B1FBD32A900FE7F13 /* RecorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1288691FBD32A900FE7F13 /* RecorderViewController.xib */; };
+		6E12886E1FBD371F00FE7F13 /* RecorderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E12886C1FBD371F00FE7F13 /* RecorderCell.swift */; };
+		6E12886F1FBD371F00FE7F13 /* RecorderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E12886D1FBD371F00FE7F13 /* RecorderCell.xib */; };
+		6E1288741FBD82D500FE7F13 /* VideoPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1288721FBD82D500FE7F13 /* VideoPlayViewController.swift */; };
+		6E1288751FBD82D500FE7F13 /* VideoPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1288731FBD82D500FE7F13 /* VideoPlayViewController.xib */; };
 		6E7539DB1FB2936100587BE5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7539DA1FB2936100587BE5 /* SearchViewController.swift */; };
 		6E7539DE1FB2992800587BE5 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7539DC1FB2992800587BE5 /* SearchTableViewCell.swift */; };
 		6E7539DF1FB2992800587BE5 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E7539DD1FB2992800587BE5 /* SearchTableViewCell.xib */; };
@@ -119,6 +128,15 @@
 		6E0CF25E1FA857D20033A915 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		6E0CF25F1FA857D20033A915 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		6E0D110B1FB184A3003339AC /* NavgationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavgationHelper.swift; sourceTree = "<group>"; };
+		6E1288621FBD2C7300FE7F13 /* RecorderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderManager.swift; sourceTree = "<group>"; };
+		6E1288641FBD320700FE7F13 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		6E1288651FBD320700FE7F13 /* AudioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioViewController.xib; sourceTree = "<group>"; };
+		6E1288681FBD32A900FE7F13 /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
+		6E1288691FBD32A900FE7F13 /* RecorderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecorderViewController.xib; sourceTree = "<group>"; };
+		6E12886C1FBD371F00FE7F13 /* RecorderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderCell.swift; sourceTree = "<group>"; };
+		6E12886D1FBD371F00FE7F13 /* RecorderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecorderCell.xib; sourceTree = "<group>"; };
+		6E1288721FBD82D500FE7F13 /* VideoPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayViewController.swift; sourceTree = "<group>"; };
+		6E1288731FBD82D500FE7F13 /* VideoPlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPlayViewController.xib; sourceTree = "<group>"; };
 		6E7539DA1FB2936100587BE5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6E7539DC1FB2992800587BE5 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		6E7539DD1FB2992800587BE5 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -297,6 +315,22 @@
 			path = "8.拍照";
 			sourceTree = "<group>";
 		};
+		6E12885D1FBD2A1B00FE7F13 /* 22.语音与视频的录制与播放 */ = {
+			isa = PBXGroup;
+			children = (
+				6E1288641FBD320700FE7F13 /* AudioViewController.swift */,
+				6E1288651FBD320700FE7F13 /* AudioViewController.xib */,
+				6E1288681FBD32A900FE7F13 /* RecorderViewController.swift */,
+				6E1288691FBD32A900FE7F13 /* RecorderViewController.xib */,
+				6E12886C1FBD371F00FE7F13 /* RecorderCell.swift */,
+				6E12886D1FBD371F00FE7F13 /* RecorderCell.xib */,
+				6E1288721FBD82D500FE7F13 /* VideoPlayViewController.swift */,
+				6E1288731FBD82D500FE7F13 /* VideoPlayViewController.xib */,
+				6E1288621FBD2C7300FE7F13 /* RecorderManager.swift */,
+			);
+			path = "22.语音与视频的录制与播放";
+			sourceTree = "<group>";
+		};
 		6E7539D91FB2934E00587BE5 /* 17.搜索 */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +448,7 @@
 				6E7539EB1FB429F100587BE5 /* 19.视屏作为页面背景 */,
 				6E7539F01FB5366C00587BE5 /* 20.简略朋友圈 */,
 				6EF0A1EC1FBBD3B5007FA290 /* 21.瀑布流 */,
+				6E12885D1FBD2A1B00FE7F13 /* 22.语音与视频的录制与播放 */,
 				2014F95B1F9CC15A005FB975 /* resources */,
 				6ED65A2D1F97422F001BB3FA /* Assets.xcassets */,
 				6ED65A2F1F97422F001BB3FA /* LaunchScreen.storyboard */,
@@ -601,6 +636,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E12886B1FBD32A900FE7F13 /* RecorderViewController.xib in Resources */,
+				6E12886F1FBD371F00FE7F13 /* RecorderCell.xib in Resources */,
 				6ED65A5C1F98814E001BB3FA /* TimerViewController.xib in Resources */,
 				6E0CF2611FA857D20033A915 /* CameraViewController.xib in Resources */,
 				20CBF3291FA7629900DEE0CA /* gastronomy6.jpg in Resources */,
@@ -612,6 +649,7 @@
 				6E7539E81FB3E41D00587BE5 /* ScreenSwitchViewController.xib in Resources */,
 				2014F96E1FA0E03A005FB975 /* DateSelectionViewController.xib in Resources */,
 				2014F9671F9CC895005FB975 /* LocalVideoCell.xib in Resources */,
+				6E1288671FBD320700FE7F13 /* AudioViewController.xib in Resources */,
 				20CBF3271FA7629900DEE0CA /* gastronomy4.jpg in Resources */,
 				6E7539DF1FB2992800587BE5 /* SearchTableViewCell.xib in Resources */,
 				2014F95D1F9CC174005FB975 /* 测试视频.mov in Resources */,
@@ -622,6 +660,7 @@
 				6E8C08131F9DC98000970068 /* LocationViewController.xib in Resources */,
 				20CBF3281FA7629900DEE0CA /* gastronomy5.jpg in Resources */,
 				6E7539E31FB2995500587BE5 /* SearchDetailViewController.xib in Resources */,
+				6E1288751FBD82D500FE7F13 /* VideoPlayViewController.xib in Resources */,
 				6EFFA6811FA06ABA00B2FCE9 /* TouchShowViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,6 +699,8 @@
 				6E02FEA91FA9A9C100BC5614 /* PreviewPictureViewController.swift in Sources */,
 				6E7539E21FB2995500587BE5 /* SearchDetailViewController.swift in Sources */,
 				6EEAA0D51FAB0A4A007E69E0 /* LoginViewController.swift in Sources */,
+				6E12886A1FBD32A900FE7F13 /* RecorderViewController.swift in Sources */,
+				6E1288631FBD2C7300FE7F13 /* RecorderManager.swift in Sources */,
 				6EFA7DBC1FB1948900565FAC /* NavigationChangeViewController.swift in Sources */,
 				6ED65A5B1F98814E001BB3FA /* TimerViewController.swift in Sources */,
 				20F5B42B1FADB20C00824C3F /* CoreAnimationViewController.swift in Sources */,
@@ -676,6 +717,8 @@
 				6E02FEA31FA96F3800BC5614 /* RefreshViewController.swift in Sources */,
 				6E7539F51FB5372E00587BE5 /* FriendsCircleCell.swift in Sources */,
 				6EF0A1F01FBBDC0D007FA290 /* WaterfallFlowLayout.swift in Sources */,
+				6E1288741FBD82D500FE7F13 /* VideoPlayViewController.swift in Sources */,
+				6E12886E1FBD371F00FE7F13 /* RecorderCell.swift in Sources */,
 				6E0CF2601FA857D20033A915 /* CameraViewController.swift in Sources */,
 				6E7539FC1FB92AEC00587BE5 /* ShowPictureView.swift in Sources */,
 				20BCAC7E1F9CB94E0053DC55 /* LocalVideoViewController.swift in Sources */,
@@ -687,6 +730,7 @@
 				20F5B4291FADA35F00824C3F /* PositionAnimationViewController.swift in Sources */,
 				2014F9661F9CC895005FB975 /* LocalVideoCell.swift in Sources */,
 				6E8C08311FA032B800970068 /* TouchViewController.swift in Sources */,
+				6E1288661FBD320700FE7F13 /* AudioViewController.swift in Sources */,
 				6E7539DE1FB2992800587BE5 /* SearchTableViewCell.swift in Sources */,
 				20CBF31A1FA6099500DEE0CA /* CardScrollViewController.swift in Sources */,
 			);

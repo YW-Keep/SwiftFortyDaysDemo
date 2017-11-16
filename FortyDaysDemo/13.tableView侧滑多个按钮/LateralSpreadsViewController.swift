@@ -87,5 +87,4 @@ class LateralSpreadsViewController: UIViewController, UITableViewDataSource, UIT
         return [delect, share, topper]
     }
     
-
 }

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecorderViewController" customModule="FortyDaysDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="completeButton" destination="x76-lJ-ize" id="EZb-cl-bps"/>
+                <outlet property="playButton" destination="NHe-n6-g9J" id="crS-RU-YbK"/>
+                <outlet property="recorderButton" destination="ksz-dE-LBG" id="H17-tg-BUW"/>
+                <outlet property="tableView" destination="3Kc-tj-hYy" id="fdD-5m-7qh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qI7-hg-VsH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksz-dE-LBG">
+                            <rect key="frame" x="167" y="159" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="cSI-j3-NSx"/>
+                                <constraint firstAttribute="height" constant="40" id="wfm-JJ-ncp"/>
+                            </constraints>
+                            <state key="normal" title="录制" image="recordStart"/>
+                            <state key="selected" image="recordStop"/>
+                            <connections>
+                                <action selector="tapingAndPauseAction:" destination="-1" eventType="touchUpInside" id="U5c-VU-AEy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHe-n6-g9J">
+                            <rect key="frame" x="53" y="159" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="npH-rj-MsN"/>
+                                <constraint firstAttribute="height" constant="40" id="r82-ht-11L"/>
+                            </constraints>
+                            <state key="normal" title="播放" image="videoPlay"/>
+                            <state key="selected" image="videoPause"/>
+                            <connections>
+                                <action selector="playAction:" destination="-1" eventType="touchUpInside" id="fKa-AB-1eJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x76-lJ-ize">
+                            <rect key="frame" x="282" y="159" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="32n-3m-gJ0"/>
+                                <constraint firstAttribute="height" constant="40" id="XcT-7F-C6a"/>
+                            </constraints>
+                            <state key="normal" title="完成" image="recordComplete"/>
+                            <connections>
+                                <action selector="completeAction:" destination="-1" eventType="touchUpInside" id="BFh-ye-LY3"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="录音" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKI-Yj-NGt">
+                            <rect key="frame" x="118" y="81" width="139" height="59"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="59" id="ed3-QN-l7Q"/>
+                                <constraint firstAttribute="width" constant="139" id="qIY-Ek-d3X"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96281602365317953" green="1" blue="0.98799699858660706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="x76-lJ-ize" secondAttribute="trailing" constant="53" id="TD4-6e-DdB"/>
+                        <constraint firstItem="XKI-Yj-NGt" firstAttribute="centerX" secondItem="qI7-hg-VsH" secondAttribute="centerX" id="f5Q-Rh-sp1"/>
+                        <constraint firstItem="ksz-dE-LBG" firstAttribute="top" secondItem="XKI-Yj-NGt" secondAttribute="bottom" constant="19" id="g4c-Hd-bMf"/>
+                        <constraint firstItem="XKI-Yj-NGt" firstAttribute="top" secondItem="qI7-hg-VsH" secondAttribute="top" constant="81" id="ny5-d1-xiu"/>
+                        <constraint firstItem="x76-lJ-ize" firstAttribute="top" secondItem="qI7-hg-VsH" secondAttribute="top" constant="159" id="oOp-0j-0jv"/>
+                        <constraint firstItem="NHe-n6-g9J" firstAttribute="leading" secondItem="qI7-hg-VsH" secondAttribute="leading" constant="53" id="qju-lu-Vt9"/>
+                        <constraint firstAttribute="height" constant="220" id="vsn-xS-Pav"/>
+                        <constraint firstItem="ksz-dE-LBG" firstAttribute="centerX" secondItem="qI7-hg-VsH" secondAttribute="centerX" id="wjL-Sw-BhF"/>
+                        <constraint firstItem="NHe-n6-g9J" firstAttribute="top" secondItem="qI7-hg-VsH" secondAttribute="top" constant="159" id="wso-uy-1qE"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3Kc-tj-hYy">
+                    <rect key="frame" x="0.0" y="220" width="375" height="447"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zuS-nG-2XJ"/>
+                        <outlet property="delegate" destination="-1" id="Ixi-IY-7fp"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3Kc-tj-hYy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3B1-bK-c9u"/>
+                <constraint firstItem="qI7-hg-VsH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4TA-wu-Aa2"/>
+                <constraint firstItem="3Kc-tj-hYy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Gi5-T5-Lb6"/>
+                <constraint firstItem="qI7-hg-VsH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="IBl-ir-0Lk"/>
+                <constraint firstItem="3Kc-tj-hYy" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="bG7-nX-sNm"/>
+                <constraint firstItem="3Kc-tj-hYy" firstAttribute="top" secondItem="qI7-hg-VsH" secondAttribute="bottom" id="yta-oH-fg0"/>
+                <constraint firstItem="qI7-hg-VsH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="z39-oT-x3y"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="366.5" y="-34.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="recordComplete" width="100" height="100"/>
+        <image name="recordStart" width="100" height="100"/>
+        <image name="recordStop" width="100" height="100"/>
+        <image name="videoPause" width="101" height="100"/>
+        <image name="videoPlay" width="101" height="100"/>
+    </resources>
+</document>

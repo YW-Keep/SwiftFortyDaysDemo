@@ -128,5 +128,11 @@
 		<key>controller</key>
 		<string>WaterfallFlowViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>音频的录制与播放</string>
+		<key>controller</key>
+		<string>AudioViewController</string>
+	</dict>
 </array>
 </plist>
