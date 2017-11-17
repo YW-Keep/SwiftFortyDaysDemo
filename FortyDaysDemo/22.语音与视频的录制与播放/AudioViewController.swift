@@ -26,6 +26,11 @@ class AudioViewController: UIViewController {
         self.show(col, sender: nil)
     }
     
+    @IBAction func pushToVideoRecorder(_ sender: UIButton) {
+        let col = VideoRecordViewController()
+        self.show(col, sender: nil)
+        
+    }
     /*
     // MARK: - Navigation
 

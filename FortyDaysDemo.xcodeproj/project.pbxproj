@@ -57,6 +57,8 @@
 		6E7539F81FB5788200587BE5 /* FriendsMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7539F71FB5788200587BE5 /* FriendsMessageModel.swift */; };
 		6E7539FC1FB92AEC00587BE5 /* ShowPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7539FB1FB92AEC00587BE5 /* ShowPictureView.swift */; };
 		6E7539FE1FB92B1C00587BE5 /* ShowPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7539FD1FB92B1C00587BE5 /* ShowPictureCell.swift */; };
+		6E8876291FBE7669000FE568 /* VideoRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8876271FBE7669000FE568 /* VideoRecordViewController.swift */; };
+		6E88762A1FBE7669000FE568 /* VideoRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8876281FBE7669000FE568 /* VideoRecordViewController.xib */; };
 		6E8C08121F9DC98000970068 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C08101F9DC98000970068 /* LocationViewController.swift */; };
 		6E8C08131F9DC98000970068 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8C08111F9DC98000970068 /* LocationViewController.xib */; };
 		6E8C081C1F9F0ED900970068 /* ColorGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8C081B1F9F0ED900970068 /* ColorGradientViewController.swift */; };
@@ -152,6 +154,8 @@
 		6E7539F71FB5788200587BE5 /* FriendsMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsMessageModel.swift; sourceTree = "<group>"; };
 		6E7539FB1FB92AEC00587BE5 /* ShowPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPictureView.swift; sourceTree = "<group>"; };
 		6E7539FD1FB92B1C00587BE5 /* ShowPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPictureCell.swift; sourceTree = "<group>"; };
+		6E8876271FBE7669000FE568 /* VideoRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordViewController.swift; sourceTree = "<group>"; };
+		6E8876281FBE7669000FE568 /* VideoRecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoRecordViewController.xib; sourceTree = "<group>"; };
 		6E8C08101F9DC98000970068 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		6E8C08111F9DC98000970068 /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		6E8C081B1F9F0ED900970068 /* ColorGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGradientViewController.swift; sourceTree = "<group>"; };
@@ -327,6 +331,8 @@
 				6E1288721FBD82D500FE7F13 /* VideoPlayViewController.swift */,
 				6E1288731FBD82D500FE7F13 /* VideoPlayViewController.xib */,
 				6E1288621FBD2C7300FE7F13 /* RecorderManager.swift */,
+				6E8876271FBE7669000FE568 /* VideoRecordViewController.swift */,
+				6E8876281FBE7669000FE568 /* VideoRecordViewController.xib */,
 			);
 			path = "22.语音与视频的录制与播放";
 			sourceTree = "<group>";
@@ -650,6 +656,7 @@
 				2014F96E1FA0E03A005FB975 /* DateSelectionViewController.xib in Resources */,
 				2014F9671F9CC895005FB975 /* LocalVideoCell.xib in Resources */,
 				6E1288671FBD320700FE7F13 /* AudioViewController.xib in Resources */,
+				6E88762A1FBE7669000FE568 /* VideoRecordViewController.xib in Resources */,
 				20CBF3271FA7629900DEE0CA /* gastronomy4.jpg in Resources */,
 				6E7539DF1FB2992800587BE5 /* SearchTableViewCell.xib in Resources */,
 				2014F95D1F9CC174005FB975 /* 测试视频.mov in Resources */,
@@ -733,6 +740,7 @@
 				6E1288661FBD320700FE7F13 /* AudioViewController.swift in Sources */,
 				6E7539DE1FB2992800587BE5 /* SearchTableViewCell.swift in Sources */,
 				20CBF31A1FA6099500DEE0CA /* CardScrollViewController.swift in Sources */,
+				6E8876291FBE7669000FE568 /* VideoRecordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
