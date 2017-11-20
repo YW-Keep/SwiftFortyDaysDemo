@@ -140,5 +140,11 @@
 		<key>controller</key>
 		<string>TableViewCellMoveController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>老虎机</string>
+		<key>controller</key>
+		<string>SlotMachinesViewController</string>
+	</dict>
 </array>
 </plist>
