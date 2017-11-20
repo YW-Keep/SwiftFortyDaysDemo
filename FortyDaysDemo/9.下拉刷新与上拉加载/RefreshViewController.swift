@@ -77,5 +77,4 @@ class RefreshViewController: UIViewController, UITableViewDataSource, UITableVie
         return 0.1
     }
 
-    
 }
