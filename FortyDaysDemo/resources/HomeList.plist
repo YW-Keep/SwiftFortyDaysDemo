@@ -146,5 +146,11 @@
 		<key>controller</key>
 		<string>SlotMachinesViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>数据请求</string>
+		<key>controller</key>
+		<string>SearchBookViewController</string>
+	</dict>
 </array>
 </plist>

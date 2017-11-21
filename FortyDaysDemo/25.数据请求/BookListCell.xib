@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookListCell" rowHeight="110" id="KGk-i7-Jjw" customClass="BookListCell" customModule="FortyDaysDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是书名" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ir-p1-onS">
+                        <rect key="frame" x="90" y="15" width="215" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="KCE-Xm-Gy0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgI-2s-s63">
+                        <rect key="frame" x="90" y="63.5" width="215" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="4Z7-cF-WRg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v0b-1D-3ay">
+                        <rect key="frame" x="20" y="15" width="50" height="69"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="jpb-t1-rYn"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="v0b-1D-3ay" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9KC-0m-o8D"/>
+                    <constraint firstItem="9ir-p1-onS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Bit-B1-HMo"/>
+                    <constraint firstItem="v0b-1D-3ay" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="DCC-t3-Jmq"/>
+                    <constraint firstAttribute="bottom" secondItem="v0b-1D-3ay" secondAttribute="bottom" constant="15" id="JpY-Ls-Oxh"/>
+                    <constraint firstAttribute="bottom" secondItem="DgI-2s-s63" secondAttribute="bottom" constant="18" id="KHI-o9-Ri7"/>
+                    <constraint firstAttribute="trailing" secondItem="DgI-2s-s63" secondAttribute="trailing" constant="15" id="Mz2-im-llU"/>
+                    <constraint firstItem="DgI-2s-s63" firstAttribute="leading" secondItem="v0b-1D-3ay" secondAttribute="trailing" constant="20" id="Z4B-91-iwb"/>
+                    <constraint firstAttribute="trailing" secondItem="9ir-p1-onS" secondAttribute="trailing" constant="15" id="ZDz-pf-3UT"/>
+                    <constraint firstItem="9ir-p1-onS" firstAttribute="leading" secondItem="v0b-1D-3ay" secondAttribute="trailing" constant="20" id="gS3-3D-h6k"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="authorLabel" destination="DgI-2s-s63" id="dKx-0a-Lsn"/>
+                <outlet property="bookImgView" destination="v0b-1D-3ay" id="o5g-q6-Nvz"/>
+                <outlet property="bookNameLabel" destination="9ir-p1-onS" id="uy9-OK-TSr"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="123"/>
+        </tableViewCell>
+    </objects>
+</document>
