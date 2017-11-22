@@ -95,4 +95,11 @@ extension SearchBookViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = BookDetailViewController()
+        detailVC.bookId = dataArray[indexPath.row].bookId
+        self.show(detailVC, sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

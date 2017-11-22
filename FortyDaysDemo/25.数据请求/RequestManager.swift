@@ -30,4 +30,20 @@ class Request {
         })
         task.resume()
     }
+    
+    class func requestBookDetail(bookId: String, complete: @escaping (BookDetailModel) -> Void) {
+        let session = URLSession.shared
+        let urlString = "https://api.douban.com/v2/book/\(bookId)"
+        let searchURL = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)!)
+        let request = URLRequest(url: searchURL!)
+        
+        let task = session.dataTask(with: request, completionHandler: { (data, response, error) in
+            if error == nil {
+                let dic =  try? JSONSerialization.jsonObject(with: data!,options:.allowFragments) as! [String: Any]
+                let model = BookDetailModel(dic ?? [:])
+                complete(model)
+            }
+        })
+        task.resume()
+    }
 }
