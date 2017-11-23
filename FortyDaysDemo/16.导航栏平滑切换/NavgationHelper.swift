@@ -77,22 +77,28 @@ extension UINavigationController {
         return topViewController?.preferredStatusBarStyle ?? .default
     }
     
+    
+     private static let onceToken = UUID().uuidString
+    
     //method swizzling 两个方法
     class func swizzle() {
+        
         guard self == UINavigationController.self else { return }
-        
-        let needSwizzleSelectorArr = [
-            NSSelectorFromString("_updateInteractiveTransition:")
-        ]
-        
-        for selector in needSwizzleSelectorArr {
+        // 保证方法交换只执行一次
+        DispatchQueue.once(token: onceToken) {
+            let needSwizzleSelectorArr = [
+                NSSelectorFromString("_updateInteractiveTransition:")
+            ]
             
-//            let str = ("et_" + selector.description).replacingOccurrences(of: "__", with: "_")
-            // popToRootViewControllerAnimated: et_popToRootViewControllerAnimated:
-            
-            let originalMethod = class_getInstanceMethod(self, selector)
-            let swizzledMethod = class_getInstanceMethod(self, #selector(et_updateInteractiveTransition(percentComplete:)))
-            method_exchangeImplementations(originalMethod!, swizzledMethod!)
+            for selector in needSwizzleSelectorArr {
+                
+                //            let str = ("et_" + selector.description).replacingOccurrences(of: "__", with: "_")
+                // popToRootViewControllerAnimated: et_popToRootViewControllerAnimated:
+                
+                let originalMethod = class_getInstanceMethod(self, selector)
+                let swizzledMethod = class_getInstanceMethod(self, #selector(et_updateInteractiveTransition(percentComplete:)))
+                method_exchangeImplementations(originalMethod!, swizzledMethod!)
+            }
         }
     }
     
@@ -199,5 +205,25 @@ extension UINavigationController:UINavigationBarDelegate {
         }
     }
     
+}
+
+// 自定义只执行一次的代码
+extension DispatchQueue {
+    
+    private static var onceTracker = [String]()
+    
+    public class func once(token: String, block: () -> Void) {
+        // 这是互斥锁保证线程安全
+        objc_sync_enter(self)
+        // 这里用了延迟调用来保证这整个括号内的代码线程安全
+        defer { objc_sync_exit(self) }
+        
+        if onceTracker.contains(token) {
+            return
+        }
+        
+        onceTracker.append(token)
+        block()
+    }
 }
 

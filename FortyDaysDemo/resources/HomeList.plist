@@ -152,5 +152,11 @@
 		<key>controller</key>
 		<string>SearchBookViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>计算器</string>
+		<key>controller</key>
+		<string>CalculatorViewController</string>
+	</dict>
 </array>
 </plist>
