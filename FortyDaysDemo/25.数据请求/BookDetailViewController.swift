@@ -29,9 +29,9 @@ class BookDetailViewController: UIViewController {
         super.viewDidLoad()
         self.title = "图书详情"
         // Do any additional setup after loading the view.
-        Request.requestBookDetail(bookId: bookId!) { (model) in
+        Request.requestBookDetailNew(bookId: bookId!) { (model) in
             DispatchQueue.main.async {
-                self.bookImageView.loadImage(model.bookImg)
+                self.bookImageView.sd_setImage(with: URL(string: model.bookImg), placeholderImage: UIImage(named: "defaultImg"))
                 self.bookNameLabel.text = model.bookName
                 self.profileLabel.text = model.summary
                 var names = ""

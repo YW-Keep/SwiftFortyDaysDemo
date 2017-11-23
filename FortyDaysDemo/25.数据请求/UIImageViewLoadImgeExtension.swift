@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 自己写的简单的异步图片加载，做完后升级使用了SDWebImage
 extension UIImageView {
     
     func loadImage(_ urlString: String) {

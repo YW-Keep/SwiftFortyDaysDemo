@@ -69,9 +69,7 @@ extension UINavigationController {
     //Some other code
     open override func viewDidLoad() {
         UINavigationController.swizzle()
-        super.viewDidLoad()
-        navigationBar.isTranslucent = true
-        
+        super.viewDidLoad()        
     }
     
     //  NavigationController 会拦截状态栏，所以需要获取topView做一个调用

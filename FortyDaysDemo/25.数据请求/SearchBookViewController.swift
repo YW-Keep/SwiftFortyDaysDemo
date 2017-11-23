@@ -20,18 +20,6 @@ class SearchBookViewController: UIViewController {
         super.viewDidLoad()
         self.title = "搜索图书"
         tablviewInit()
-//        let url =  URL(string: "https://api.douban.com/v2/book/1220562")
-//        let session = URLSession.shared
-//        var task = session.dataTask(with: url!) { (data, response, error) in
-//            if error == nil {
-//                let dic =  try? JSONSerialization.jsonObject(with: data!,options:.allowFragments) as! [String: Any]
-//                print(dic ?? "")
-//                print(response ?? "")
-//            }
-//        }
-//        task.resume()
-
-        // Do any additional setup after loading the view.
     }
     func tablviewInit() {
         tableView.rowHeight = 100
@@ -47,7 +35,7 @@ class SearchBookViewController: UIViewController {
             print("输入内容需有啦")
             return
         }
-        Request.requestBookList(searchString: searchTextField.text!) { (models) in
+        Request.requestBookListNew(searchString: searchTextField.text!) { (models) in
             self.dataArray = models
             DispatchQueue.main.async {
                 self.tableView.reloadData()

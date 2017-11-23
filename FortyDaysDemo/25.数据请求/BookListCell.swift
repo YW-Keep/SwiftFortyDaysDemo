@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BookListCell: UITableViewCell {
     @IBOutlet weak var bookImgView: UIImageView!
@@ -27,6 +28,7 @@ class BookListCell: UITableViewCell {
                 }
                 authorLabel.text = names
                 bookImgView?.loadImage(model!.bookImg)
+                bookImgView.sd_setImage(with: URL(string: model!.bookImg), placeholderImage: UIImage(named: "defaultImg"))
             }
         }
     }

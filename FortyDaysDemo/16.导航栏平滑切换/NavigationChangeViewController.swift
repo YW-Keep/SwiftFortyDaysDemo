@@ -19,7 +19,7 @@ class NavigationChangeViewController: UIViewController, UITableViewDataSource, U
         view.dataSource = self
         view.delegate = self
         view.rowHeight = 40
-        view.backgroundColor = UIColor(displayP3Red: 255/255.0, green: 127/255.0, blue: 0/255.0, alpha: 1)
+        view.backgroundColor = UIColor(red: 255/255.0, green: 127/255.0, blue: 0/255.0, alpha: 1)
         return view;
     }()
     
@@ -31,6 +31,12 @@ class NavigationChangeViewController: UIViewController, UITableViewDataSource, U
         self.navBarAlpha = 0
         self.navBarTintColor = .white
         self.view.addSubview(tableView)
+        if #available(iOS 11, *) {
+            self.tableView.contentInsetAdjustmentBehavior = .never
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -61,7 +67,7 @@ class NavigationChangeViewController: UIViewController, UITableViewDataSource, U
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let view  = UIView()
-        view.backgroundColor = UIColor(displayP3Red: 255/255.0, green: 127/255.0, blue: 0/255.0, alpha: 1)
+        view.backgroundColor = UIColor(red: 255/255.0, green: 127/255.0, blue: 0/255.0, alpha: 1)
         return view
     }
     

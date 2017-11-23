@@ -1,0 +1,6 @@
+framework module Pods_FortyDaysDemoTests {
+  umbrella header "Pods-FortyDaysDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
