@@ -32,6 +32,7 @@
 		6E02FEA91FA9A9C100BC5614 /* PreviewPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02FEA81FA9A9C100BC5614 /* PreviewPictureViewController.swift */; };
 		6E02FEAC1FAAB8FB00BC5614 /* TableViewGradientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02FEAB1FAAB8FB00BC5614 /* TableViewGradientController.swift */; };
 		6E02FEAE1FAABE9400BC5614 /* HomeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E02FEAD1FAABE9400BC5614 /* HomeList.plist */; };
+		6E07DB791FC7C39E007DEFDF /* SmoothButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E07DB781FC7C39E007DEFDF /* SmoothButton.swift */; };
 		6E0CF2601FA857D20033A915 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CF25E1FA857D20033A915 /* CameraViewController.swift */; };
 		6E0CF2611FA857D20033A915 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E0CF25F1FA857D20033A915 /* CameraViewController.xib */; };
 		6E0D110C1FB184A3003339AC /* NavgationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D110B1FB184A3003339AC /* NavgationHelper.swift */; };
@@ -149,6 +150,7 @@
 		6E02FEA81FA9A9C100BC5614 /* PreviewPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPictureViewController.swift; sourceTree = "<group>"; };
 		6E02FEAB1FAAB8FB00BC5614 /* TableViewGradientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewGradientController.swift; sourceTree = "<group>"; };
 		6E02FEAD1FAABE9400BC5614 /* HomeList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HomeList.plist; sourceTree = "<group>"; };
+		6E07DB781FC7C39E007DEFDF /* SmoothButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothButton.swift; sourceTree = "<group>"; };
 		6E0CF25E1FA857D20033A915 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		6E0CF25F1FA857D20033A915 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		6E0D110B1FB184A3003339AC /* NavgationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavgationHelper.swift; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 			children = (
 				6E16641B1FC6B23F0099CBA8 /* CalculatorViewController.swift */,
 				6E16641C1FC6B23F0099CBA8 /* CalculatorViewController.xib */,
+				6E07DB781FC7C39E007DEFDF /* SmoothButton.swift */,
 			);
 			path = "26.计算器";
 			sourceTree = "<group>";
@@ -996,6 +999,7 @@
 				20F5B42B1FADB20C00824C3F /* CoreAnimationViewController.swift in Sources */,
 				20F5B42D1FADEF8800824C3F /* EmitterViewController.swift in Sources */,
 				6E88762D1FBE8FA2000FE568 /* TableViewCellMoveController.swift in Sources */,
+				6E07DB791FC7C39E007DEFDF /* SmoothButton.swift in Sources */,
 				6E7539E71FB3E41D00587BE5 /* ScreenSwitchViewController.swift in Sources */,
 				20F5B4271FAD9F1300824C3F /* BaseAnimationViewController.swift in Sources */,
 				6EEAA0D11FAB0475007E69E0 /* LoginAnimationViewController.swift in Sources */,
