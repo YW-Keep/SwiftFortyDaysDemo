@@ -158,5 +158,11 @@
 		<key>controller</key>
 		<string>CalculatorViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>抽屉效果的实现</string>
+		<key>controller</key>
+		<string>DrawersLeftViewController</string>
+	</dict>
 </array>
 </plist>

@@ -10,7 +10,12 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
-    @IBOutlet weak var tableView: UITableView!
+    lazy var tableView: UITableView = {
+      let inTableView = UITableView.init(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight))
+        inTableView.delegate = self
+        inTableView.dataSource = self
+        return inTableView
+    }()
     lazy var listArray:NSArray = {
         let path  = Bundle.main.path(forResource: "HomeList", ofType: "plist")
         return NSArray(contentsOfFile: path!)!
@@ -19,6 +24,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "40天demo列表"
+        self.view.addSubview(tableView)
         // 修改返回按钮上的字
         let backButton = UIBarButtonItem.init()
         backButton.title = ""

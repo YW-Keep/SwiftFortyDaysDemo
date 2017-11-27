@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = .white
+        self.window?.makeKeyAndVisible()
+        self.window?.rootViewController =  DrawersBaseViewControntroller.init(mainController: UINavigationController(rootViewController: ViewController())
+, leftController: DrawersLeftViewController())
         
         
         //  判断应用的启动是否是因为用户选择了Home Screen Quick Actions选项
