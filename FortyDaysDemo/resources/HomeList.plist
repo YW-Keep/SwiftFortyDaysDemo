@@ -162,7 +162,7 @@
 		<key>name</key>
 		<string>抽屉效果的实现</string>
 		<key>controller</key>
-		<string>DrawersLeftViewController</string>
+		<string>TransitionsFromViewController</string>
 	</dict>
 </array>
 </plist>
