@@ -44,8 +44,12 @@ class TransitionsFromViewController: UIViewController {
         col.view.backgroundColor = UIColor.white
         col.transitioningDelegate = transitionDelegate
         col.modalPresentationStyle = .custom
-        
+        transitionDelegate.delegate = col
         self.present(col, animated: true, completion: nil)
+    }
+    
+    deinit {
+        print("\(self.description)释放")
     }
     
 }

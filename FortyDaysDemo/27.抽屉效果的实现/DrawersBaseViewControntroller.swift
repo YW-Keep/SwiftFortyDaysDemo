@@ -32,6 +32,7 @@ class DrawersBaseViewControntroller: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     convenience init() {
         self.init(mainController: UINavigationController(), leftController: UIViewController())
     }
@@ -75,7 +76,9 @@ class DrawersBaseViewControntroller: UIViewController {
             // 修改蒙层的透明度
             let coefficient = (num - self.view.center.x) / (self.view.center.x * 1.5)
             layerView.alpha = 0.3*coefficient
-            sender.setTranslation(CGPoint(x: 0, y: 0), in: self.view)//矫正手指位置
+            
+            //矫正手指位置
+            sender.setTranslation(CGPoint(x: 0, y: 0), in: self.view)
         }
       
         if sender.state == .ended {
@@ -104,5 +107,10 @@ class DrawersBaseViewControntroller: UIViewController {
         }, completion: { (_) in
             self.layerView.isHidden = true
         })
+    }
+    
+    // preferredStatusBarStyle 这个会被根视图拦截 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return mainCol.preferredStatusBarStyle
     }
 }

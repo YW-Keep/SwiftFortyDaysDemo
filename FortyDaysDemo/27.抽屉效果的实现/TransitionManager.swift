@@ -8,9 +8,22 @@
 
 import UIKit
 
+ @objc protocol TransitionManagerDelegate {
+    func dismiss()
+}
+
 class TransitionManager: NSObject,UIViewControllerTransitioningDelegate {
     var isPresenting = false
-    var snapshot:UIView?
+    var snapshot:UIView? {
+        didSet {
+            if delegate != nil {
+                let tapGestureRecognizer = UITapGestureRecognizer(target: delegate, action: #selector(delegate?.dismiss))
+                snapshot?.addGestureRecognizer(tapGestureRecognizer)
+            }
+        }
+    }
+    
+    weak var delegate:TransitionManagerDelegate?
     
     // 会先询问是否返回了一个遵守了UIViewControllerAnimatedTransitioning协议的对象，如果为空则调用系统默认的动画
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -27,7 +40,6 @@ class TransitionManager: NSObject,UIViewControllerTransitioningDelegate {
     
 }
 extension TransitionManager: UIViewControllerAnimatedTransitioning {
-    
     // 动画时间
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
