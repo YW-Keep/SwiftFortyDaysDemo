@@ -35,7 +35,6 @@ extension TransitionManager: UIViewControllerAnimatedTransitioning {
     // 执行动画的地方
     func animateTransition(using transitionContext:
         UIViewControllerContextTransitioning) {
-//let containerView = transitionContext.containerView
         guard let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from), let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) else{
             return
         }
