@@ -164,5 +164,11 @@
 		<key>controller</key>
 		<string>TransitionsFromViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>新闻切换栏</string>
+		<key>controller</key>
+		<string>NewsViewController</string>
+	</dict>
 </array>
 </plist>

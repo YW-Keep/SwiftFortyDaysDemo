@@ -10,3 +10,6 @@ import UIKit
 
 let kScreenHeight = UIScreen.main.bounds.height
 let kScreenWidth = UIScreen.main.bounds.width
+
+let iPhone_X = (kScreenWidth == 375 && kScreenHeight == 812 ? true : false)
+let NavigationBarHeight: CGFloat = (iPhone_X ? 88 : 64)

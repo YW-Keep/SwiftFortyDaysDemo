@@ -66,6 +66,10 @@
 		6E1664191FC50F6F0099CBA8 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1664171FC50F6F0099CBA8 /* BookDetailViewController.xib */; };
 		6E16641D1FC6B23F0099CBA8 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E16641B1FC6B23F0099CBA8 /* CalculatorViewController.swift */; };
 		6E16641E1FC6B23F0099CBA8 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E16641C1FC6B23F0099CBA8 /* CalculatorViewController.xib */; };
+		6E208FC01FCE9D2E00468188 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E208FBF1FCE9D2E00468188 /* NewsViewController.swift */; };
+		6E208FC21FCE9EEA00468188 /* NewsTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E208FC11FCE9EEA00468188 /* NewsTitleView.swift */; };
+		6E208FC41FCFA82B00468188 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E208FC31FCFA82B00468188 /* NewsModel.swift */; };
+		6E208FC61FCFED5900468188 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E208FC51FCFED5900468188 /* ContentView.swift */; };
 		6E7539DB1FB2936100587BE5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7539DA1FB2936100587BE5 /* SearchViewController.swift */; };
 		6E7539DE1FB2992800587BE5 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7539DC1FB2992800587BE5 /* SearchTableViewCell.swift */; };
 		6E7539DF1FB2992800587BE5 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E7539DD1FB2992800587BE5 /* SearchTableViewCell.xib */; };
@@ -191,6 +195,10 @@
 		6E1664171FC50F6F0099CBA8 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
 		6E16641B1FC6B23F0099CBA8 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		6E16641C1FC6B23F0099CBA8 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
+		6E208FBF1FCE9D2E00468188 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		6E208FC11FCE9EEA00468188 /* NewsTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTitleView.swift; sourceTree = "<group>"; };
+		6E208FC31FCFA82B00468188 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		6E208FC51FCFED5900468188 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E7539DA1FB2936100587BE5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6E7539DC1FB2992800587BE5 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		6E7539DD1FB2992800587BE5 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -456,6 +464,17 @@
 			path = "26.计算器";
 			sourceTree = "<group>";
 		};
+		6E208FBE1FCE95AC00468188 /* 28.新闻切换栏 */ = {
+			isa = PBXGroup;
+			children = (
+				6E208FBF1FCE9D2E00468188 /* NewsViewController.swift */,
+				6E208FC11FCE9EEA00468188 /* NewsTitleView.swift */,
+				6E208FC51FCFED5900468188 /* ContentView.swift */,
+				6E208FC31FCFA82B00468188 /* NewsModel.swift */,
+			);
+			path = "28.新闻切换栏";
+			sourceTree = "<group>";
+		};
 		6E7539D91FB2934E00587BE5 /* 17.搜索 */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +607,7 @@
 				6E1663F51FC3C8AA0099CBA8 /* 25.数据请求 */,
 				6E16641A1FC6B1770099CBA8 /* 26.计算器 */,
 				6E07DB7A1FCBB6AD007DEFDF /* 27.抽屉效果的实现 */,
+				6E208FBE1FCE95AC00468188 /* 28.新闻切换栏 */,
 				2014F95B1F9CC15A005FB975 /* resources */,
 				6ED65A2D1F97422F001BB3FA /* Assets.xcassets */,
 				6ED65A2F1F97422F001BB3FA /* LaunchScreen.storyboard */,
@@ -1008,6 +1028,7 @@
 			files = (
 				6E7539DB1FB2936100587BE5 /* SearchViewController.swift in Sources */,
 				6E02FEAC1FAAB8FB00BC5614 /* TableViewGradientController.swift in Sources */,
+				6E208FC21FCE9EEA00468188 /* NewsTitleView.swift in Sources */,
 				6EF0A2071FBC28E6007FA290 /* WaterfallFlowCell.swift in Sources */,
 				6E7539F81FB5788200587BE5 /* FriendsMessageModel.swift in Sources */,
 				6E1664151FC426D00099CBA8 /* UIImageViewLoadImgeExtension.swift in Sources */,
@@ -1047,6 +1068,7 @@
 				6E02FEA31FA96F3800BC5614 /* RefreshViewController.swift in Sources */,
 				6E7539F51FB5372E00587BE5 /* FriendsCircleCell.swift in Sources */,
 				6E1664131FC409620099CBA8 /* RequestManager.swift in Sources */,
+				6E208FC41FCFA82B00468188 /* NewsModel.swift in Sources */,
 				6EF0A1F01FBBDC0D007FA290 /* WaterfallFlowLayout.swift in Sources */,
 				6E1288741FBD82D500FE7F13 /* VideoPlayViewController.swift in Sources */,
 				6E07DB7E1FCBBC86007DEFDF /* DrawersLeftViewController.swift in Sources */,
@@ -1062,8 +1084,10 @@
 				6E1664181FC50F6F0099CBA8 /* BookDetailViewController.swift in Sources */,
 				20CBF31C1FA6189F00DEE0CA /* CardScrollCell.swift in Sources */,
 				20F5B4291FADA35F00824C3F /* PositionAnimationViewController.swift in Sources */,
+				6E208FC61FCFED5900468188 /* ContentView.swift in Sources */,
 				6E1663FA1FC3C8E20099CBA8 /* SearchBookViewController.swift in Sources */,
 				2014F9661F9CC895005FB975 /* LocalVideoCell.swift in Sources */,
+				6E208FC01FCE9D2E00468188 /* NewsViewController.swift in Sources */,
 				6E8C08311FA032B800970068 /* TouchViewController.swift in Sources */,
 				6E1288661FBD320700FE7F13 /* AudioViewController.swift in Sources */,
 				6E7539DE1FB2992800587BE5 /* SearchTableViewCell.swift in Sources */,
