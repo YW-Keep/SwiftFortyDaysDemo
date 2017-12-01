@@ -29,12 +29,13 @@ class NewsViewController: UIViewController {
         self.view.addSubview(titleView)
         self.view.addSubview(contentView)
         titleView.selectorDelegate = contentView
+        contentView.contentDeleagte = titleView
         getData()
         // Do any additional setup after loading the view.
     }
     
     func getData() {
-        let baseArray = ["测试","主要新闻","科技","财经","aaaa","bbbbbbb","ccccc","游戏","生活","测试","主要新闻","科技","财经","aaaa","bbbbbbb","cccc","游戏","生活"]
+        let baseArray = ["测试1","测试22","测试333","测试4444","测试5","测试6","测试7","测试8","测试9","测试101010","测试11","测试12","测试13","测试14","测试15","测试16","测试17","测试18"]
         var data: [NewsListModel] = []
         for title in baseArray {
             data.append(NewsListModel(title))

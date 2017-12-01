@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol ContentSelectorDeleagte: class {
+    func contentSelected(_ selecterNum: Int)
+    func scrollCell(selectorNum: Int, changeNum: Int, changeRatio: CGFloat)
+}
+
+
 class ContentView: UICollectionView {
     
     // 获取的数据
@@ -16,6 +22,11 @@ class ContentView: UICollectionView {
             self.reloadData()
         }
     }
+    private var pageNum = 0
+    
+    private var isIgnoreSelector = false
+    
+    weak var contentDeleagte: ContentSelectorDeleagte?
     
     override private init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         dataArray = []
@@ -52,20 +63,48 @@ extension ContentView: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.titleLabel.text = dataArray[indexPath.row].title
         return cell
     }
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        print("11")
-    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("22")
+        
+        // 修正点击后调用冲突
+        if isIgnoreSelector {
+            isIgnoreSelector = false
+            return
+        }
+        
+        // 滑动过头 不做修改
+        if contentOffset.x < 0 || contentOffset.x > CGFloat(dataArray.count - 1) * kScreenWidth {
+            return
+        }
+        
+        let selectorNum = pageNum
+        var changeNum = 0
+        var ratio : CGFloat = 0
+        if self.contentOffset.x < kScreenWidth * CGFloat(pageNum) {
+            changeNum = selectorNum - 1
+            ratio = (kScreenWidth * CGFloat(pageNum) - self.contentOffset.x) / kScreenWidth
+        } else {
+            ratio = (self.contentOffset.x - kScreenWidth * CGFloat(pageNum)) / kScreenWidth
+            changeNum = selectorNum + 1
+        }
+        ratio = ratio > 1 ? 1 : ratio
+        self.contentDeleagte?.scrollCell(selectorNum: selectorNum, changeNum: changeNum, changeRatio: ratio)
     }
+    
+    // 结束后修改位置
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-         print("333")
+        pageNum = Int(scrollView.contentOffset.x / kScreenWidth)
+        contentDeleagte?.contentSelected(pageNum)
+        
     }
 }
 
 extension ContentView: TitleSelectorDeleagte {
     func titleSelected(_ selecterNum: Int) {
+        isIgnoreSelector = true
         self.contentOffset = CGPoint(x: self.frame.width * CGFloat(selecterNum), y: self.contentOffset.y)
+        pageNum = selecterNum
+       
     }
 }
 

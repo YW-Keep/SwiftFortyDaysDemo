@@ -32,6 +32,7 @@ class NewsTitleView: UICollectionView {
         self.register(NewsTitleCell.self, forCellWithReuseIdentifier: "NewsTitleCell")
         self.backgroundColor = .white
         self.showsHorizontalScrollIndicator = false
+        self.allowsMultipleSelection = true
     }
     convenience init(frame: CGRect) {
         let layout  = UICollectionViewFlowLayout()
@@ -46,6 +47,7 @@ class NewsTitleView: UICollectionView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
 
 extension NewsTitleView: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -75,12 +77,30 @@ extension NewsTitleView: UICollectionViewDelegate, UICollectionViewDataSource {
         nowCell?.mySelected = true
         selectorNum = indexPath.row
         selectorDelegate?.titleSelected(selectorNum)
+        // 滑动到指定的cell
+        self.scrollToItem(at: IndexPath(row: selectorNum, section: 0), at: .centeredHorizontally, animated: true)
     }
 }
 
 extension NewsTitleView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: dataArray[indexPath.row].width, height: 20)
+    }
+}
+
+// 滑动结束后需要移动位置
+extension NewsTitleView: ContentSelectorDeleagte {
+    func scrollCell(selectorNum: Int, changeNum: Int, changeRatio: CGFloat) {
+        let selectorCell = self.cellForItem(at: IndexPath(row: selectorNum, section: 0)) as? NewsTitleCell
+        selectorCell?.titleLabel.font = UIFont.systemFont(ofSize: 15 + 3*(1 - changeRatio))
+        selectorCell?.titleLabel.textColor = UIColor(red: (60.0 + 195*(1 - changeRatio))/255.0, green: 60*(1 - changeRatio)/255.0, blue: 60*(1 - changeRatio)/255.0, alpha: 1)
+         let changeCell = self.cellForItem(at: IndexPath(row: changeNum, section: 0)) as? NewsTitleCell
+        changeCell?.titleLabel.font = UIFont.systemFont(ofSize: 15 + 3 * changeRatio)
+        changeCell?.titleLabel.textColor =  UIColor(red: (60 + 195) * changeRatio/255.0, green: 60/255.0 * (1 - changeRatio), blue: 60 * (1 - changeRatio)/255.0, alpha: 1)
+    }
+    
+    func contentSelected(_ selecterNum: Int) {
+        self.collectionView(self, didSelectItemAt: IndexPath(row: selecterNum, section: 0))
     }
 }
 
@@ -91,7 +111,7 @@ class NewsTitleCell : UICollectionViewCell {
     // 没有用系统了 为了防止引起系统自定义的点击效果
      var mySelected: Bool {
         didSet {
-            self.titleLabel.textColor = self.mySelected ? .red : .lightGray
+            self.titleLabel.textColor = self.mySelected ? UIColor(red: 255.0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1) : UIColor(red: 60/255.0, green: 60/255.0, blue: 60/255.0, alpha: 1)
             self.titleLabel.font = UIFont.systemFont(ofSize: self.mySelected ? 18 : 15)
         }
     }
@@ -102,7 +122,7 @@ class NewsTitleCell : UICollectionViewCell {
         titleLabel.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.systemFont(ofSize: 15)
-        titleLabel.textColor = .lightGray
+        titleLabel.textColor = UIColor(red: 60/255.0, green: 60/255.0, blue: 60/255.0, alpha: 1)
         self.addSubview(titleLabel)
     }
     
