@@ -66,6 +66,9 @@
 		6E1664191FC50F6F0099CBA8 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1664171FC50F6F0099CBA8 /* BookDetailViewController.xib */; };
 		6E16641D1FC6B23F0099CBA8 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E16641B1FC6B23F0099CBA8 /* CalculatorViewController.swift */; };
 		6E16641E1FC6B23F0099CBA8 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E16641C1FC6B23F0099CBA8 /* CalculatorViewController.xib */; };
+		6E1678921FD12AB200D28C7A /* AddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1678911FD12AB200D28C7A /* AddressListViewController.swift */; };
+		6E1678971FD1354000D28C7A /* AddressListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1678951FD1354000D28C7A /* AddressListCell.swift */; };
+		6E1678981FD1354000D28C7A /* AddressListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1678961FD1354000D28C7A /* AddressListCell.xib */; };
 		6E208FC01FCE9D2E00468188 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E208FBF1FCE9D2E00468188 /* NewsViewController.swift */; };
 		6E208FC21FCE9EEA00468188 /* NewsTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E208FC11FCE9EEA00468188 /* NewsTitleView.swift */; };
 		6E208FC41FCFA82B00468188 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E208FC31FCFA82B00468188 /* NewsModel.swift */; };
@@ -195,6 +198,9 @@
 		6E1664171FC50F6F0099CBA8 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
 		6E16641B1FC6B23F0099CBA8 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		6E16641C1FC6B23F0099CBA8 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
+		6E1678911FD12AB200D28C7A /* AddressListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListViewController.swift; sourceTree = "<group>"; };
+		6E1678951FD1354000D28C7A /* AddressListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListCell.swift; sourceTree = "<group>"; };
+		6E1678961FD1354000D28C7A /* AddressListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressListCell.xib; sourceTree = "<group>"; };
 		6E208FBF1FCE9D2E00468188 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		6E208FC11FCE9EEA00468188 /* NewsTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTitleView.swift; sourceTree = "<group>"; };
 		6E208FC31FCFA82B00468188 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
@@ -464,6 +470,16 @@
 			path = "26.计算器";
 			sourceTree = "<group>";
 		};
+		6E16788E1FD129A900D28C7A /* 29.通讯录 */ = {
+			isa = PBXGroup;
+			children = (
+				6E1678911FD12AB200D28C7A /* AddressListViewController.swift */,
+				6E1678951FD1354000D28C7A /* AddressListCell.swift */,
+				6E1678961FD1354000D28C7A /* AddressListCell.xib */,
+			);
+			path = "29.通讯录";
+			sourceTree = "<group>";
+		};
 		6E208FBE1FCE95AC00468188 /* 28.新闻切换栏 */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,6 +624,7 @@
 				6E16641A1FC6B1770099CBA8 /* 26.计算器 */,
 				6E07DB7A1FCBB6AD007DEFDF /* 27.抽屉效果的实现 */,
 				6E208FBE1FCE95AC00468188 /* 28.新闻切换栏 */,
+				6E16788E1FD129A900D28C7A /* 29.通讯录 */,
 				2014F95B1F9CC15A005FB975 /* resources */,
 				6ED65A2D1F97422F001BB3FA /* Assets.xcassets */,
 				6ED65A2F1F97422F001BB3FA /* LaunchScreen.storyboard */,
@@ -845,6 +862,7 @@
 				6E8C08131F9DC98000970068 /* LocationViewController.xib in Resources */,
 				6E1664191FC50F6F0099CBA8 /* BookDetailViewController.xib in Resources */,
 				6E07DC141FCD59E3007DEFDF /* TransitionsToViewController.xib in Resources */,
+				6E1678981FD1354000D28C7A /* AddressListCell.xib in Resources */,
 				20CBF3281FA7629900DEE0CA /* gastronomy5.jpg in Resources */,
 				6E7539E31FB2995500587BE5 /* SearchDetailViewController.xib in Resources */,
 				6E1288751FBD82D500FE7F13 /* VideoPlayViewController.xib in Resources */,
@@ -1052,6 +1070,7 @@
 				20F5B42B1FADB20C00824C3F /* CoreAnimationViewController.swift in Sources */,
 				6E07DC061FCD336A007DEFDF /* TransitionManager.swift in Sources */,
 				20F5B42D1FADEF8800824C3F /* EmitterViewController.swift in Sources */,
+				6E1678971FD1354000D28C7A /* AddressListCell.swift in Sources */,
 				6E88762D1FBE8FA2000FE568 /* TableViewCellMoveController.swift in Sources */,
 				6E07DB791FC7C39E007DEFDF /* SmoothButton.swift in Sources */,
 				6E7539E71FB3E41D00587BE5 /* ScreenSwitchViewController.swift in Sources */,
@@ -1059,6 +1078,7 @@
 				6EEAA0D11FAB0475007E69E0 /* LoginAnimationViewController.swift in Sources */,
 				6EEAA0D81FAC48B5007E69E0 /* LateralSpreadsViewController.swift in Sources */,
 				6E1663F31FC2C6260099CBA8 /* SlotMachinesViewController.swift in Sources */,
+				6E1678921FD12AB200D28C7A /* AddressListViewController.swift in Sources */,
 				6EEAA0E41FB002DE007E69E0 /* Model.xcdatamodeld in Sources */,
 				2014F96D1FA0E03A005FB975 /* DateSelectionViewController.swift in Sources */,
 				6E02FEA61FA970D000BC5614 /* Macro.swift in Sources */,

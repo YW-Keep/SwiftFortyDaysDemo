@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -94,16 +95,16 @@
                 <mask key="constraints">
                     <exclude reference="Ral-S0-kK5"/>
                     <exclude reference="wVA-cZ-BV6"/>
+                    <exclude reference="9tN-mR-osA"/>
+                    <exclude reference="ZnY-6k-3KU"/>
+                    <exclude reference="jOP-XW-V5S"/>
+                    <exclude reference="qiA-Gr-06R"/>
                     <exclude reference="04q-at-aNh"/>
                     <exclude reference="Hal-Wb-RPJ"/>
                     <exclude reference="Tem-yd-ftm"/>
                     <exclude reference="gIF-RB-5X8"/>
                     <exclude reference="sT1-Ml-M2T"/>
                     <exclude reference="teL-mf-xTb"/>
-                    <exclude reference="9tN-mR-osA"/>
-                    <exclude reference="ZnY-6k-3KU"/>
-                    <exclude reference="jOP-XW-V5S"/>
-                    <exclude reference="qiA-Gr-06R"/>
                     <exclude reference="KxD-be-NKf"/>
                     <exclude reference="Ppe-x1-4rc"/>
                     <exclude reference="Vom-gO-tzk"/>
@@ -114,9 +115,9 @@
             <variation key="heightClass=compact">
                 <mask key="constraints">
                     <include reference="wVA-cZ-BV6"/>
+                    <include reference="ZnY-6k-3KU"/>
                     <include reference="04q-at-aNh"/>
                     <include reference="Hal-Wb-RPJ"/>
-                    <include reference="ZnY-6k-3KU"/>
                     <include reference="KxD-be-NKf"/>
                     <include reference="WkD-uz-syf"/>
                 </mask>
@@ -124,19 +125,19 @@
             <variation key="heightClass=regular">
                 <mask key="constraints">
                     <include reference="Ral-S0-kK5"/>
+                    <include reference="qiA-Gr-06R"/>
                     <include reference="sT1-Ml-M2T"/>
                     <include reference="teL-mf-xTb"/>
-                    <include reference="qiA-Gr-06R"/>
                     <include reference="Vom-gO-tzk"/>
                     <include reference="scp-DM-bu3"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="constraints">
-                    <exclude reference="Tem-yd-ftm"/>
-                    <exclude reference="gIF-RB-5X8"/>
                     <include reference="9tN-mR-osA"/>
                     <exclude reference="jOP-XW-V5S"/>
+                    <exclude reference="Tem-yd-ftm"/>
+                    <exclude reference="gIF-RB-5X8"/>
                     <exclude reference="Ppe-x1-4rc"/>
                 </mask>
             </variation>

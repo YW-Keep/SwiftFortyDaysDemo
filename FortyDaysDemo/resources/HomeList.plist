@@ -170,5 +170,11 @@
 		<key>controller</key>
 		<string>NewsViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>通讯录</string>
+		<key>controller</key>
+		<string>AddressListViewController</string>
+	</dict>
 </array>
 </plist>
