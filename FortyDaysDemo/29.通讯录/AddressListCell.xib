@@ -20,7 +20,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uBp-Wq-kNw">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraImg" translatesAutoresizingMaskIntoConstraints="NO" id="uBp-Wq-kNw">
                         <rect key="frame" x="10" y="10" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="Yc2-yk-5ZS"/>
@@ -44,6 +44,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="headImgView" destination="uBp-Wq-kNw" id="O2j-38-9r9"/>
+                <outlet property="titleLabel" destination="ZE0-jc-S5g" id="ojQ-wj-8H7"/>
+            </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="CameraImg" width="100" height="100"/>
+    </resources>
 </document>
