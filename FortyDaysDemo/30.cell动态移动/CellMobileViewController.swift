@@ -99,27 +99,27 @@ class CellMobileViewController: UIViewController {
         dataArray.append(String(dataArray.count + 1))
         isAddUpData = true
         conllectionView.reloadData()
-        
-        DispatchQueue.main.async {
-            var y = self.conllectionView.contentSize.height - self.conllectionView.frame.height
-            y = y < -64 ? -64 : y
-            self.conllectionView.setContentOffset( CGPoint(x: 0, y: y), animated: true)
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
-                if let cell =  self.conllectionView.cellForItem(at: IndexPath(row: self.dataArray.count - 1, section: 0)) as? MobileCell {
-                    var rect = cell.frame
-                    rect.origin.y = cell.frame.origin.y - self.conllectionView.contentOffset.y
-                    self.showView.text = String(self.dataArray.count)
-                    self.showView.frame = CGRect(x: 100, y: kScreenHeight - 80, width: 80, height: 30)
-                    self.view.addSubview(self.showView)
-                    UIView.animate(withDuration: 0.5, animations: {
-                        self.showView.frame = rect
-                    }, completion: { (_) in
-                        cell.titleLabel.backgroundColor = .lightGray
-                        self.showView.removeFromSuperview()
-                        self.isAddUpData = false
-                    })
-                    
-                }
+        // 让它先刷新
+        conllectionView.layoutIfNeeded()
+        var y = self.conllectionView.contentSize.height - self.conllectionView.frame.height
+        y = y < -64 ? -64 : y
+        self.conllectionView.setContentOffset( CGPoint(x: 0, y: y), animated: true)
+        // 给一个滑动的时间 
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
+            if let cell =  self.conllectionView.cellForItem(at: IndexPath(row: self.dataArray.count - 1, section: 0)) as? MobileCell {
+                var rect = cell.frame
+                rect.origin.y = cell.frame.origin.y - self.conllectionView.contentOffset.y
+                self.showView.text = String(self.dataArray.count)
+                self.showView.frame = CGRect(x: 100, y: kScreenHeight - 80, width: 80, height: 30)
+                self.view.addSubview(self.showView)
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.showView.frame = rect
+                }, completion: { (_) in
+                    cell.titleLabel.backgroundColor = .lightGray
+                    self.showView.removeFromSuperview()
+                    self.isAddUpData = false
+                })
+                
             }
         }
     }
