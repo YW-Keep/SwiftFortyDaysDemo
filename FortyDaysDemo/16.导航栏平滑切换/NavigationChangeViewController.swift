@@ -23,7 +23,6 @@ class NavigationChangeViewController: UIViewController, UITableViewDataSource, U
         return view;
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white

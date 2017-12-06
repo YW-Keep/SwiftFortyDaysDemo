@@ -176,5 +176,11 @@
 		<key>controller</key>
 		<string>AddressListViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>cell移动</string>
+		<key>controller</key>
+		<string>CellMobileViewController</string>
+	</dict>
 </array>
 </plist>

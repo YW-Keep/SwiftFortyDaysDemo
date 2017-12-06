@@ -65,7 +65,7 @@ extension ContentView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+        print(scrollView.contentOffset.x)
         // 修正点击后调用冲突
         if isIgnoreSelector {
             isIgnoreSelector = false

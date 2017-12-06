@@ -69,6 +69,8 @@
 		6E1678921FD12AB200D28C7A /* AddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1678911FD12AB200D28C7A /* AddressListViewController.swift */; };
 		6E1678971FD1354000D28C7A /* AddressListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1678951FD1354000D28C7A /* AddressListCell.swift */; };
 		6E1678981FD1354000D28C7A /* AddressListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1678961FD1354000D28C7A /* AddressListCell.xib */; };
+		6E16789B1FD4FB4000D28C7A /* CellMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E16789A1FD4FB4000D28C7A /* CellMobileViewController.swift */; };
+		6E16789D1FD783F800D28C7A /* MobileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E16789C1FD783F800D28C7A /* MobileCell.swift */; };
 		6E208FC01FCE9D2E00468188 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E208FBF1FCE9D2E00468188 /* NewsViewController.swift */; };
 		6E208FC21FCE9EEA00468188 /* NewsTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E208FC11FCE9EEA00468188 /* NewsTitleView.swift */; };
 		6E208FC41FCFA82B00468188 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E208FC31FCFA82B00468188 /* NewsModel.swift */; };
@@ -201,6 +203,8 @@
 		6E1678911FD12AB200D28C7A /* AddressListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListViewController.swift; sourceTree = "<group>"; };
 		6E1678951FD1354000D28C7A /* AddressListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListCell.swift; sourceTree = "<group>"; };
 		6E1678961FD1354000D28C7A /* AddressListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressListCell.xib; sourceTree = "<group>"; };
+		6E16789A1FD4FB4000D28C7A /* CellMobileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMobileViewController.swift; sourceTree = "<group>"; };
+		6E16789C1FD783F800D28C7A /* MobileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCell.swift; sourceTree = "<group>"; };
 		6E208FBF1FCE9D2E00468188 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		6E208FC11FCE9EEA00468188 /* NewsTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTitleView.swift; sourceTree = "<group>"; };
 		6E208FC31FCFA82B00468188 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
@@ -480,6 +484,15 @@
 			path = "29.通讯录";
 			sourceTree = "<group>";
 		};
+		6E1678991FD4F62900D28C7A /* 30.cell动态移动 */ = {
+			isa = PBXGroup;
+			children = (
+				6E16789A1FD4FB4000D28C7A /* CellMobileViewController.swift */,
+				6E16789C1FD783F800D28C7A /* MobileCell.swift */,
+			);
+			path = "30.cell动态移动";
+			sourceTree = "<group>";
+		};
 		6E208FBE1FCE95AC00468188 /* 28.新闻切换栏 */ = {
 			isa = PBXGroup;
 			children = (
@@ -625,6 +638,7 @@
 				6E07DB7A1FCBB6AD007DEFDF /* 27.抽屉效果的实现 */,
 				6E208FBE1FCE95AC00468188 /* 28.新闻切换栏 */,
 				6E16788E1FD129A900D28C7A /* 29.通讯录 */,
+				6E1678991FD4F62900D28C7A /* 30.cell动态移动 */,
 				2014F95B1F9CC15A005FB975 /* resources */,
 				6ED65A2D1F97422F001BB3FA /* Assets.xcassets */,
 				6ED65A2F1F97422F001BB3FA /* LaunchScreen.storyboard */,
@@ -1047,6 +1061,8 @@
 				6E7539DB1FB2936100587BE5 /* SearchViewController.swift in Sources */,
 				6E02FEAC1FAAB8FB00BC5614 /* TableViewGradientController.swift in Sources */,
 				6E208FC21FCE9EEA00468188 /* NewsTitleView.swift in Sources */,
+				6E16789D1FD783F800D28C7A /* MobileCell.swift in Sources */,
+				6E16789B1FD4FB4000D28C7A /* CellMobileViewController.swift in Sources */,
 				6EF0A2071FBC28E6007FA290 /* WaterfallFlowCell.swift in Sources */,
 				6E7539F81FB5788200587BE5 /* FriendsMessageModel.swift in Sources */,
 				6E1664151FC426D00099CBA8 /* UIImageViewLoadImgeExtension.swift in Sources */,

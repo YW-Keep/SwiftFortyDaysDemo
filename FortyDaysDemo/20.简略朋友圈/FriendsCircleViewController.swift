@@ -7,9 +7,7 @@
 //
 
 import UIKit
-/*
- 有个约束冲突没想明白
- */
+
 class FriendsCircleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var dataAarry: [FriendsMessage] = []

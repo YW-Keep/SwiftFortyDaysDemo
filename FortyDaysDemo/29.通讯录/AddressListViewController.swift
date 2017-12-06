@@ -53,8 +53,8 @@ class AddressListViewController: UIViewController {
         for title in titleArray {
             var nameList = [String]()
             let num = Int(arc4random_uniform(9) + 1)
-            for _ in 0...num {
-                nameList.append(title + String(num))
+            for index in 0...num {
+                nameList.append(title + String(index))
             }
             inData.append(["title" : title,"list" : nameList])
         }

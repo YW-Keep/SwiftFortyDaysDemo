@@ -32,7 +32,6 @@ class NewsTitleView: UICollectionView {
         self.register(NewsTitleCell.self, forCellWithReuseIdentifier: "NewsTitleCell")
         self.backgroundColor = .white
         self.showsHorizontalScrollIndicator = false
-        self.allowsMultipleSelection = true
     }
     convenience init(frame: CGRect) {
         let layout  = UICollectionViewFlowLayout()
@@ -93,10 +92,10 @@ extension NewsTitleView: ContentSelectorDeleagte {
     func scrollCell(selectorNum: Int, changeNum: Int, changeRatio: CGFloat) {
         let selectorCell = self.cellForItem(at: IndexPath(row: selectorNum, section: 0)) as? NewsTitleCell
         selectorCell?.titleLabel.font = UIFont.systemFont(ofSize: 15 + 3*(1 - changeRatio))
-        selectorCell?.titleLabel.textColor = UIColor(red: (60.0 + 195*(1 - changeRatio))/255.0, green: 60*(1 - changeRatio)/255.0, blue: 60*(1 - changeRatio)/255.0, alpha: 1)
+        selectorCell?.titleLabel.textColor = UIColor(red: (60.0 + 195*(1 - changeRatio))/255.0, green: (60 * changeRatio)/255.0, blue: (60 * changeRatio)/255.0, alpha: 1)
          let changeCell = self.cellForItem(at: IndexPath(row: changeNum, section: 0)) as? NewsTitleCell
         changeCell?.titleLabel.font = UIFont.systemFont(ofSize: 15 + 3 * changeRatio)
-        changeCell?.titleLabel.textColor =  UIColor(red: (60 + 195) * changeRatio/255.0, green: 60/255.0 * (1 - changeRatio), blue: 60 * (1 - changeRatio)/255.0, alpha: 1)
+        changeCell?.titleLabel.textColor =  UIColor(red: (60 + 195 * changeRatio)/255.0, green: 60/255.0 * (1 - changeRatio), blue: 60 * (1 - changeRatio)/255.0, alpha: 1)
     }
     
     func contentSelected(_ selecterNum: Int) {
